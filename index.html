@@ -1,0 +1,1058 @@
+<!doctype html>
+<html class="page">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Ассоциация застройщиков</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+        
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style1250.css" />
+        <link rel="stylesheet" href="style768.css" />
+        <link rel="stylesheet" href="style480.css" />
+
+        </head>
+    <body>
+<!--ХЕДЕР /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <header class="wrapper">
+            <div class="content flex row-flex header-box">
+                <div class="logo-head"><img src="img/photo/image 6.png"></div>
+                <nav class="flex row-flex nav-head">
+                    <ul class="flex row-flex nav-head-box">
+                        <li>
+                            <a>Проекты</a>
+                        </li>
+                        <li>
+                            <a>О компании</a>
+                        </li>
+                        <li>
+                            <a>Выбрать квартиру</a>
+                        </li>
+                        <li>
+                            <a>Ипотека</a>
+                        </li>
+                        <li>
+                            <a>Ипотечный калькулятор</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="flex column-flex phone-header-box">
+                    <p class="orange-text bold-text">+7 (905) 930-31-13</p>
+                    <p>Заказать звонок</p>
+                </a>
+            </div>
+        </header>
+<!--ГЛАВНАЯ СТРАНИЦА ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <main class="wrapper">
+            <!--Секция с фоном на всю ширину /////////////////-->
+            <section>
+                <div class="flex column-flex img-fw-box">
+                    <img src="img/photo/Rectangle 1.png">
+                    <div class="flex column-flex content img-fw-text-box">
+                        <h1 class="white-text">Новостройки Новосибирска</h1>
+                        <p class="white-text medium-text">Единая база Новостроек</p>
+                        <a class="btn btn-orange">Забронировать квартиру</a>
+                    </div>
+                </div>
+            </section>
+            <!--Секция поиск /////////////////-->
+            <section class="content">
+                <div class="flex column-flex search">
+                    <h2>Старт продаж</h2>
+                    <div class="flex column-flex">
+                        <div class="flex row-flex search-tab">
+                            <button class="search-tablinks active text-size14" onclick="openSearch(event, 'Apartments')">Квартиры</button>
+                            <button class="search-tablinks text-size14" onclick="openSearch(event, 'Parking')">Паркинги</button>
+                            <button class="search-tablinks text-size14" onclick="openSearch(event, 'Commerce')">Коммерция</button>
+                        </div>                  
+                        <div id="Apartments" class="flex column-flex search-tabcontent">
+                            <div class="flex row-flex search-input-box">
+                                <div class="search-icon"><img src="img/icon/search.svg"></div>
+                                <input>
+                                <a class="text-size14">Тип коммерции</a>
+                                <a class="text-size14">Цена от-до, р</a>
+                                <a class="text-size14">Срок сдачи</a>
+                                <a class="flex row-flex search-filter-box">
+                                    <div><img src="img/icon/sliders-horizontal.svg"></div>
+                                    <p class="text-size14">Все фильтры</p>
+                                </a>
+                            </div>
+                            <div class="flex row-flex search-btn-box">
+                                <a class="flex row-flex btn btn-gray">
+                                    <div><img src="img/icon/map-pin.svg"></div>
+                                    <p>На карте</p>
+                                </a>
+                                <a class="btn btn-orange">11111 квартир в 160 ЖК</a>
+                            </div>
+                        </div>           
+                        <div id="Parking" class="flex column-flex search-tabcontent">
+                            <div class="flex row-flex search-input-box">
+                                <div class="search-icon"><img src="img/icon/search.svg"></div>
+                                <input>
+                                <a class="text-size14">Тип коммерции</a>
+                                <a class="text-size14">Цена от-до, р</a>
+                                <a class="text-size14">Срок сдачи</a>
+                                <a class="flex row-flex search-filter-box">
+                                    <div><img src="img/icon/sliders-horizontal.svg"></div>
+                                    <p class="text-size14">Все фильтры</p>
+                                </a>
+                            </div>
+                            <div class="flex row-flex search-btn-box">
+                                <a class="flex row-flex btn btn-gray">
+                                    <div><img src="img/icon/map-pin.svg"></div>
+                                    <p>На карте</p>
+                                </a>
+                                <a class="btn btn-orange">11111 квартир в 160 ЖК</a>
+                            </div>
+                        </div>            
+                        <div id="Commerce" class="flex column-flex search-tabcontent">
+                            <div class="flex row-flex search-input-box">
+                                <div class="search-icon"><img src="img/icon/search.svg"></div>
+                                <input>
+                                <a class="text-size14">Тип коммерции</a>
+                                <a class="text-size14">Цена от-до, р</a>
+                                <a class="text-size14">Срок сдачи</a>
+                                <a class="flex row-flex search-filter-box">
+                                    <div><img src="img/icon/sliders-horizontal.svg"></div>
+                                    <p class="text-size14">Все фильтры</p>
+                                </a>
+                            </div>
+                            <div class="flex row-flex search-btn-box">
+                                <a class="flex row-flex btn btn-gray">
+                                    <div><img src="img/icon/map-pin.svg"></div>
+                                    <p>На карте</p>
+                                </a>
+                                <a class="btn btn-orange">11111 квартир в 160 ЖК</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Слайдер с ЖК /////////////////-->
+            <section class="content flex column-flex slider-jk-box">
+                <div class="flex row-flex slider-jk-top">
+                    <h2>Старты продаж</h2>
+                    <a class="btn btn-gray">Все старты продаж</a>
+                </div>
+
+                <div class="swiper jk-Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="flex column-flex slider-one-jk-box">
+                                <div class="flex column-flex slider-one-jk-photo-box">
+                                    <img src="img/photo/Rectangle 3.png">
+                                    <div class="flex row-flex slider-one-jk-photo-text">
+                                        <p class="text-size12">Новостройки</p>
+                                        <p class="text-size12">Вторички</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex column-flex slider-one-jk-info">
+                                    <p class="medium-text text-size18">Наименование ЖК</p>
+                                    <p class="dark-gray-text text-size14">Расположение</p>
+                                </div>
+
+                                <ul class="flex column-flex slider-one-jk-info">
+                                    <li class="flex row-flex slider-one-jk-info-appartament">
+                                        <p>Студии</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                    <li class="flex row-flex slider-one-jk-info-appartament">
+                                        <p>1-к. кв.</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                    <li class="flex row-flex slider-one-jk-info-appartament">
+                                        <p>2-к. кв.</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                    <li class="flex row-flex slider-one-jk-info-appartament">
+                                        <p>3-к. кв.</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                </ul>
+                                
+                                <p>Сдан в 3кв. 2023 г.</p>
+
+                                <div class="flex column-flex slider-one-jk-low-info">
+                                    <p class="light-gray-text text-size12">Застройщик: ГК «»</p>
+                                    <p class="light-gray-text text-size12">Квартир: 900</p>
+                                </div>
+                            </div>
+                        </div>           
+                    </div>
+                    
+                    <div class="swiper-button-next"><img src="img/icon/Frame 3.png"></div>
+                    <div class="swiper-button-prev"><img src="img/icon/Frame 4.png"></div>
+                </div>
+
+                <script>
+                var swiper = new Swiper(".jk-Swiper", {
+                    slidesPerView: 3,
+                    spaceBetween: 36,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+                </script>
+                <a class="btn btn-gray">Все проекты</a>
+            </section>
+
+            <!--Секция О нас /////////////////-->
+            <section class="content flex column-flex about">
+                <div class="flex row-flex about-text-box">
+                    <div class="flex column-flex">
+                        <h2>Компания "Ассоциация застройщиков"</h2>
+                        <p class="medium-text text-size20">Наша миссия  – улучшение качества жизни населения России</p>
+                    </div>
+                    <div class="flex column-flex">
+                        <p>1. Мы не являемся агентством недвижимости, а выступаем в качестве партнера застройщиков по всей России. Именно поэтому, у нас сосредоточена вся полная и актуальная информация о ценах, акциях, стартах продаж новых объектов и сроках завершения строительства. </p>
+                        <p>2. Сотрудничество с Ассоциацией застройщиков полностью бесплатно. Мы не берем комиссию, так как финансируемся за счет строительных компаний. Юридический отдел сопроводит сделку на всех этапах. А ипотечный консультант получит для вас кредитное решение в ведущих банках страны под самую низкую процентную ставку, даже если вы не имеете первоначального взноса.</p>
+                        <p>3. Сотрудничество с Ассоциацией застройщиков полностью безопасно. Так как мы работаем только с надежными и финансово стабильными девелоперскими компаниями. Мы действуем строго в рамках 214-ФЗ с применением эскроу-счетов.</p>
+                    </div>
+                </div>
+
+                <div class="flex row-flex about-advantages-box">
+                    <div class="flex column-flex about-advantages-item">
+                        <p class="medium-text orange-text text-size20"><span>12,8</span>тыс</p>
+                        <p class="text-size14">проданных квартир</p>
+                    </div>
+                    <div class="flex column-flex about-advantages-item">
+                        <p class="medium-text orange-text text-size20"><span>5,5</span>тыс</p>
+                        <p class="text-size14">семей новоселов</p>
+                    </div>
+                    <div class="flex column-flex about-advantages-item">
+                        <p class="medium-text orange-text text-size20"><span>6</span>лет</p>
+                        <p class="text-size14">надежной работы</p>
+                    </div>
+                    <div class="flex column-flex about-advantages-item">
+                        <p class="medium-text orange-text text-size20"><span>450</span>+</p>
+                        <p class="text-size14">проектов</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--Секция Обратной связи/////////////////-->
+            <section class="content">
+                <div class="flex row-flex feedback-box">
+                    <div class="flex column-flex feedback-left-box">
+                        <h2 class="white-text">Хотите купить квартиру в Новосибирске недорого?</h2>
+                        <p class="white-text text-size20">Мы бесплатно проконсультируем и все покажем!</p>
+                    </div>
+                    <div class="flex column-flex feedback-right-box">
+                        <div class="flex row-flex feedback-input-box">
+                            <input type="text">
+                            <input type="tel">
+                        </div>
+                        <div class="flex row-flex feedback-check-box">
+                            <input type="checkbox">
+                            <label class="white-text">Я согласен с Политикой конфиденциальности</label>
+                        </div>
+                        <a class="btn btn-gray">Заказать звонок</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+<!--СТРАНИЦА О КОМПАНИИ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <main>
+            <!--Секция сотрудники //////////////////-->
+            <section>
+                <div class="flex column-flex content employee-section">
+                    <h2>Наша команда</h2>
+                    
+                    <ul class="flex row-flex employee-box">
+                        <li class="flex column-flex employee-item">
+                            <div class="employee-photo"><img src="img/photo/employee.png"></div>
+                            <div class="flex column-flex employee-text-box">
+                                <p class="orange-text text-size20 medium-text">Константин Цивелев</p>
+                                <p class="light-gray-text text-size14">Директор филиала г. Новосибирск</p>
+                                <p class="text-size14">+7 (905) 930-31-13</p>
+                                <p class="text-size14">info-azr@yandex.ru</p>
+                            </div>
+                        </li>
+                        <li class="flex column-flex employee-item">
+                            <div class="employee-photo"><img src="img/photo/employee.png"></div>
+                            <div class="flex column-flex employee-text-box">
+                                <p class="orange-text text-size20 medium-text">Константин Цивелев</p>
+                                <p class="light-gray-text text-size14">Директор филиала г. Новосибирск</p>
+                                <p class="text-size14">+7 (905) 930-31-13</p>
+                                <p class="text-size14">info-azr@yandex.ru</p>
+                            </div>
+                        </li>
+                        <li class="flex column-flex employee-item">
+                            <div class="employee-photo"><img src="img/photo/employee.png"></div>
+                            <div class="flex column-flex employee-text-box">
+                                <p class="orange-text text-size20 medium-text">Константин Цивелев</p>
+                                <p class="light-gray-text text-size14">Директор филиала г. Новосибирск</p>
+                                <p class="text-size14">+7 (905) 930-31-13</p>
+                                <p class="text-size14">info-azr@yandex.ru</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="flex row-flex employee-btn-box">
+                        <a class="btn btn-gray">Написать нам</a>
+                        <a class="btn btn-orange">Все сотрудики</a>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex column-flex content company-box">
+                    <h2>Нам доверяют</h2>
+
+                        <div class="swiper company-Swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
+                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 3.png"></div>
+                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 3.png"></div>
+                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
+                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 3.png"></div>
+                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
+                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
+                            </div>
+                    </div>
+
+                    <script>
+                        var swiper = new Swiper(".company-Swiper", {
+                            slidesPerView: 4.7,
+                            spaceBetween: 40,
+                            navigation: {
+                                nextEl: ".swiper-button-next",
+                                prevEl: ".swiper-button-prev",
+                            },
+                        });
+                        </script>
+                </div>
+            </section>
+        </main>
+<!--СТРАНИЦА ПРОЕКТЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <main>
+            <!--Секция с проектами//////////////////-->
+            <section>
+                <div class="flex column-flex content project-section">
+                    <div class="flex row-flex project-head-box">
+                        <h2>Все проекты</h2>
+                        <div class="flex row-flex project-head-sorter">
+                            <form id="form-sorter" class="one-jk-sorted-form">
+                                <select>
+                                    <option><p>По умолчанию</p></option>
+                                    <option><p>Сначала дешевые</p></option>
+                                    <option><p>Сначала дорогие</p></option>
+                                </select>
+                            </form>
+                            <div class="switch">
+                                <input class="project-switch-input" type="checkbox" id="switch" />
+                                <label class="project-switch-label" for="switch"></label>
+                                <div class="flex row-flex switch-img-box">
+                                    <div>
+                                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect y="4" x="4" width="8" height="8" fill="#CE3A13"/>
+                                            <rect y="4" x="14" width="8" height="8" fill="#CE3A13"/>
+                                            <rect y="14" x="4" width="8" height="8" fill="#CE3A13"/>
+                                            <rect y="14" x="14" width="8" height="8" fill="#CE3A13"/>
+                                        </svg>                            
+                                    </div>
+                                    <div>
+                                        <svg width="27" height="27" viewBox="0 0 100% 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect y="4" x="4" width="18" height="4" fill="#FAFAFA"/>
+                                            <rect y="11" x="4" width="18" height="4" fill="#FAFAFA"/>
+                                            <rect y="18" x="4" width="18" height="4" fill="#FAFAFA"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Плиточный вид-->
+                    <ul class="flex row-flex project-tile-box">
+                        <li class="flex column-flex slider-one-jk-box">
+                            <div class="flex column-flex slider-one-jk-photo-box">
+                                <img src="img/photo/Rectangle 3.png">
+                                <div class="flex row-flex slider-one-jk-photo-text">
+                                    <p class="text-size12">Новостройки</p>
+                                    <p class="text-size12">Вторички</p>
+                                </div>
+                            </div>
+
+                            <div class="flex column-flex slider-one-jk-info">
+                                <p class="medium-text text-size18">Наименование ЖК</p>
+                                <p class="dark-gray-text text-size14">Расположение</p>
+                            </div>
+
+                            <ul class="flex column-flex slider-one-jk-info">
+                                <li class="flex row-flex slider-one-jk-info-appartament">
+                                    <p>Студии</p>
+                                    <p>от 5 000 000</p>
+                                </li>
+                                <li class="flex row-flex slider-one-jk-info-appartament">
+                                    <p>1-к. кв.</p>
+                                    <p>от 5 000 000</p>
+                                </li>
+                                <li class="flex row-flex slider-one-jk-info-appartament">
+                                    <p>2-к. кв.</p>
+                                    <p>от 5 000 000</p>
+                                </li>
+                                <li class="flex row-flex slider-one-jk-info-appartament">
+                                    <p>3-к. кв.</p>
+                                    <p>от 5 000 000</p>
+                                </li>
+                            </ul>
+                            
+                            <p>Сдан в 3кв. 2023 г.</p>
+
+                            <div class="flex column-flex slider-one-jk-low-info">
+                                <p class="light-gray-text text-size12">Застройщик: ГК «»</p>
+                                <p class="light-gray-text text-size12">Квартир: 900</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--Список вид-->
+                    <ul class="flex column-flex project-list-box">
+                        <li class="flex row-flex project-list-item">
+                            <div class="project-list-photo"><img src="img/photo/Rectangle 16.png"></div>
+
+                            <div class="flex row-flex project-list-text">
+                                <div class="flex column-flex project-list-jk-info-box">
+                                    <div class="flex column-flex project-list-jk-main-info">
+                                        <p class="bold-text text-size18">Наименование ЖК</p>
+                                        <p class="dark-gray-text text-size14">Расположение</p>
+                                    </div>
+                                    <div class="flex row-flex project-list-jk-btn-text">
+                                        <p class="text-size12">Новостройки</p>
+                                        <p class="text-size12">Вторички</p>
+                                    </div>
+                                </div>
+    
+                                <div class="flex column-flex project-list-jk-low-info-box">
+                                    <p class="medium-text">Сдан в 3кв. 2023 г.</p>
+    
+                                    <div class="flex column-flex project-list-jk-low-info">
+                                        <p class="light-gray-text text-size14">Застройщик: ГК «»</p>
+                                        <p class="light-gray-text text-size14">Квартир: 900</p>
+                                    </div>
+                                </div>
+    
+                                <ul class="flex column-flex project-list-jk-info">
+                                    <li class="flex row-flex project-list-jk-info-appartament">
+                                        <p>Студии</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                    <li class="flex row-flex project-list-jk-info-appartament">
+                                        <p>1-к. кв.</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                    <li class="flex row-flex project-list-jk-info-appartament">
+                                        <p>2-к. кв.</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                    <li class="flex row-flex project-list-jk-info-appartament">
+                                        <p>3-к. кв.</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a class="btn btn-gray">Все проекты</a>
+                </div>
+            </section>
+        </main>
+
+<!--СТРАНИЦА ЖК ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <main>
+            <!--Секция общая информация о ЖК//////////////////-->
+            <section>
+                <div class="flex column-flex content">
+                    <h1 class="one-jk-title">Наименование ЖК</h1>
+
+                    <ul class="flex row-flex one-jk-filter-box">
+                        <li class="one-jk-filter-item-select">
+                            <a class="text-size14">Квартиры</a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Паркинг</a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Коммерция <span>New</span></a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Карта</a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Об объекте</a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Видео</a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Отделка</a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Ход строительства</a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Файлы</a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Акции <span>New</span></a>
+                        </li>
+                        <li>
+                            <a class="text-size14">Ипотека</a>
+                        </li>
+                    </ul>
+
+                    <div class="flex row-flex one-jk-general-info">
+                        <div class="flex column-flex">
+                            <div class="swiper one-jk-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div><img src="img/photo/Rectangle 3.png"></div>
+                                    </div>  
+                                    <div class="swiper-slide">
+                                        <div><img src="img/photo/Rectangle 3.png"></div>
+                                    </div>             
+                                </div>
+                                
+                                <div class="swiper-button-next"><img src="img/icon/Frame 3b.svg"></div>
+                                <div class="swiper-button-prev"><img src="img/icon/Frame 4b.svg"></div>
+                            </div>
+
+                            <div thumbsSlider="" class="swiper one-jk-swiper-bottom">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div><img src="img/photo/Rectangle 3.png"></div>
+                                    </div>  
+                                    <div class="swiper-slide">
+                                        <div><img src="img/photo/Rectangle 3.png"></div>
+                                    </div>  
+                                </div>
+                            </div>
+        
+                            <script>
+                                var swiper = new Swiper(".one-jk-swiper-bottom", {
+                                    loop: true,
+                                    spaceBetween: 40,
+                                    slidesPerView: 8,
+                                    freeMode: true,
+                                    watchSlidesProgress: true,
+                                    });
+                                var swiper2 = new Swiper(".one-jk-swiper", {
+                                    loop: true,
+                                    spaceBetween: 40,
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                    thumbs: {
+                                        swiper: swiper,
+                                    },
+                                });
+                            </script>
+
+                            <p class="text-size18">г. Новосибирск, ул. Проспект Димитрова, д. 4/1</p>
+                        </div>
+
+                        <div class="flex column-flex one-jk-info-box">
+                            <form id="form-corpus" class="one-jk-info-select-form">
+                                <select>
+                                    <option><p class="text-size18">Корпус <span class="orange-text">&#183;</span> Сдан в 2кв. 2023г.</p></option>
+                                    <option><p class="text-size18">Корпус <span class="orange-text">&#183;</span> Сдан в 1кв. 2013г.</p></option>
+                                </select>
+                            </form>
+
+                            <ul class="flex column-flex one-jk-info-text-box">
+                                <li class="flex row-flex">
+                                    <p class="light-gray-text">Застройщик</p>
+                                    <p class="medium-text">ГК "КВС"</p>
+                                </li>
+                                <li class="flex row-flex">
+                                    <p class="light-gray-text">Старт продаж</p>
+                                    <p class="medium-text">Март 2024 - корпус 1 «Кот-Баюн»</p>
+                                </li>
+                                <li class="flex row-flex">
+                                    <p class="light-gray-text">Срок сдачи дома</p>
+                                    <p class="medium-text">Заселен - 1 кв. 2027</p>
+                                </li>
+                                <li class="flex row-flex">
+                                    <p class="light-gray-text">Тип дома</p>
+                                    <p class="medium-text">Газобетон-монолит</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!--Секция подбор квартир//////////////////-->
+            <section>
+                <div class="flex column-flex content one-jk-search">
+                    <div class="flex column-flex">                  
+                        <div class="flex row-flex search-one-jk-input-box">
+                            <div class="search-one-jk-icon"><img src="img/icon/search.svg"></div>
+                            <input>
+                            <a class="text-size14">Тип квартиры</a>
+                            <a class="text-size14">Цена от-до, р</a>
+                            <a class="text-size14">Срок сдачи</a>
+                            <a class="flex row-flex search-one-jk-filter-box">
+                                <div><img src="img/icon/sliders-horizontal.svg"></div>
+                                <p class="text-size14">Все фильтры</p>
+                            </a>
+                            <a class="text-size14">11111 квартир</a>
+                        </div>
+
+                        <div class="flex row-flex search-one-jk-btn-box">
+                            <div class="flex row-flex search-one-jk-btn-left-box">
+                                <div class="flex row-flex search-one-jk-two-btn">
+                                    <a class="flex row-flex">
+                                        <div class="icon"><img src="img/icon/list.svg"></div>
+                                        <p>Таблицы</p>
+                                    </a>
+                                    <a class="flex row-flex one-jk-select-btn">
+                                        <div class="icon"><img src="img/icon/layout-dashboard.svg"></div>
+                                        <p>Планировки</p>
+                                    </a>
+                                </div>
+                                <a class="flex row-flex one-jk-gray-btn">
+                                    <div class="icon"><img src="img/icon/layout-template.svg"></div>
+                                    <p>Квартиры в шахматке</p>
+                                </a>
+                            </div>
+
+                            <form id="form-sorter" class="one-jk-sorted-form">
+                                <select>
+                                    <option><p>По умолчанию</p></option>
+                                    <option><p>Сначала дешевые</p></option>
+                                    <option><p>Сначала дорогие</p></option>
+                                </select>
+                            </form>
+                        </div>          
+                    </div>
+
+                    <p class="text-size18">Корпус <span class="orange-text">&#183;</span> Сдан в 1кв. 2013г.</p>
+
+
+                    <div class="flex column-flex one-jk-types-apartments">
+                        <details>
+                            <summary class="flex row-flex drop-down-one-apartment">
+                                <p class="medium-text">Студии</p>
+                                <p class="medium-text">От 5 000 000</p>
+                                <p class="medium-text">24.87 м&sup2; - 28.45м&sup2;</p>
+                                <p class="medium-text">4 950 000 ₽ - 6 500 000 ₽</p>
+                                <p class="medium-text">5 квартир</p>
+                            </summary>
+
+                            <div class="swiper apartments-swiper">
+                                <div class="swiper-wrapper"> 
+                                    <div class="flex column-flex swiper-slide">
+                                        <div class="apartments-swiper-img-box">
+                                            <img src="img/photo/Plan-studia.png">
+                                            <div class="flex row-flex apartments-swiper-img-text">
+                                                <p>Новостройки</p>
+                                                <p>Вторичка</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex column-flex apartments-swiper-info">
+                                            <p class="medium-text">Студии, 28.45м&sup2;</p>
+                                            <p class="medium-text text-size18">5 000 000₽</p>
+                                        </div>
+                                        <p>Корпус №, этаж 1</p>
+                                        <p class="text-size14 light-gray-text">Черновая</p>
+                                    </div>               
+                                </div>
+                            </div>
+
+                            <script>
+                                var swiper = new Swiper(".apartments-swiper", {
+                                    slidesPerView: 3,
+                                    spaceBetween: 50,
+                                });
+                            </script>
+                        </details>
+
+                        <details>
+                            <summary class="flex row-flex drop-down-one-apartment">
+                                <p class="medium-text">Студии</p>
+                                <p class="medium-text">От 5 000 000</p>
+                                <p class="medium-text">24.87 м&sup2; - 28.45м&sup2;</p>
+                                <p class="medium-text">4 950 000 ₽ - 6 500 000 ₽</p>
+                                <p class="medium-text">5 квартир</p>
+                            </summary>
+
+                            <div class="swiper apartments-swiper">
+                                <div class="swiper-wrapper"> 
+                                    <div class="flex column-flex swiper-slide">
+                                        <div class="apartments-swiper-img-box">
+                                            <img src="img/photo/Plan-studia.png">
+                                            <div class="flex row-flex apartments-swiper-img-text">
+                                                <p>Новостройки</p>
+                                                <p>Вторичка</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex column-flex apartments-swiper-info">
+                                            <p class="medium-text">Студии, 28.45м&sup2;</p>
+                                            <p class="medium-text text-size18">5 000 000₽</p>
+                                        </div>
+                                        <p>Корпус №, этаж 1</p>
+                                        <p class="text-size14 light-gray-text">Черновая</p>
+                                    </div>               
+                                </div>
+                            </div>
+
+                            <script>
+                                var swiper = new Swiper(".apartments-swiper", {
+                                    slidesPerView: 3,
+                                    spaceBetween: 50,
+                                });
+                            </script>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!--Секция карта//////////////////-->
+            <section>
+                <div class="flex column-flex content">
+                    <iframe class="one-jk-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Abac6208159f89148cf40c35d28929e72ef43a41f095e3213ca780b816f33f0a9&amp;source=constructor" width="873" height="400" frameborder="0"></iframe>
+                    <div class="flex row-flex one-jk-map-btn-box">
+                        <a class="flex row-flex">
+                            <div><img></div>
+                            <p>Супермаркет</p>
+                        </a>
+                        <a class="flex row-flex">
+                            <div><img></div>
+                            <p>Детский сад</p>
+                        </a>
+                        <a class="flex row-flex">
+                            <div><img></div>
+                            <p>Школа</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--Секция об объекте//////////////////-->
+            <section>
+                <div class="flex column-flex content">
+                    <h2 class="one-jk-benefits-title">Об объекте</h2>
+                    <div class="flex row-flex one-jk-benefits-box">
+                        <ul class="flex row-flex one-jk-benefits-left">
+                            <li class="flex column-flex one-jk-benefits-img-box">
+                                <div class="one-jk-benefits-img"><img src="img/photo/Rectangle 16-1.png"></div>
+                                <p>Преимущество</p>
+                            </li>
+                            <li class="flex column-flex one-jk-benefits-img-box">
+                                <div class="one-jk-benefits-img"><img src="img/photo/Rectangle 16.png"></div>
+                                <p>Преимущество</p>
+                            </li>
+                            <li class="flex column-flex one-jk-benefits-img-box">
+                                <div class="one-jk-benefits-img"><img src="img/photo/Rectangle 16-1.png"></div>
+                                <p>Преимущество</p>
+                            </li>
+                            <li class="flex column-flex one-jk-benefits-img-box">
+                                <div class="one-jk-benefits-img"><img src="img/photo/Rectangle 16.png"></div>
+                                <p>Преимущество</p>
+                            </li>
+                            <li class="flex column-flex one-jk-benefits-img-box">
+                                <div class="one-jk-benefits-img"><img src="img/photo/Rectangle 16-1.png"></div>
+                                <p>Преимущество</p>
+                            </li>
+                        </ul>
+                        <div class="flex column-flex one-jk-benefits-right">
+                            <p>orem ipsum dolor sit amet consectetur. Sed cursus vitae amet mauris purus vulputate nisi diam risus. Ultricies mauris mi est duis pellentesque elit magna auctor aliquam. Consectetur a odio vivamus leo id. Posuere mauris enim porta enim laoreet enim aliquam sit. Magna adipiscing velit orci eget convallis. Viverra iaculis integer convallis tellus sed eu scelerisque id. Eu amet semper morbi in pharetra urna tellus egestas libero. Ipsum tortor porttitor amet etiam eget volutpat. Velit pretium dictumst id sit elit euismod. Id faucibus tellus vitae accumsan bibendum in maecenas tellus. Phasellus malesuada dui vel nibh ultricies fermentum nec tempor sapien. Arcu nisl at id morbi. Ullamcorper gravida ut aenean massa venenatis malesuada lectus nunc.</p>
+                            <p>orem ipsum dolor sit amet consectetur. Sed cursus vitae amet mauris purus vulputate nisi diam risus. Ultricies mauris mi est duis pellentesque elit magna auctor aliquam. Consectetur a odio vivamus leo id. Posuere mauris enim porta enim laoreet enim aliquam sit. Magna adipiscing velit orci eget convallis. Viverra iaculis integer convallis tellus sed eu scelerisque id. Eu amet semper morbi in pharetra urna tellus egestas libero. Ipsum tortor porttitor amet etiam eget volutpat. Velit pretium dictumst id sit elit euismod. Id faucibus tellus vitae accumsan bibendum in maecenas tellus. Phasellus malesuada dui vel nibh ultricies fermentum nec tempor sapien. Arcu nisl at id morbi. Ullamcorper gravida ut aenean massa venenatis malesuada lectus nunc.</p>
+                            <p>orem ipsum dolor sit amet consectetur. Sed cursus vitae amet mauris purus vulputate nisi diam risus. Ultricies mauris mi est duis pellentesque elit magna auctor aliquam. Consectetur a odio vivamus leo id. Posuere mauris enim porta enim laoreet enim aliquam sit. Magna adipiscing velit orci eget convallis. Viverra iaculis integer convallis tellus sed eu scelerisque id. Eu amet semper morbi in pharetra urna tellus egestas libero. Ipsum tortor porttitor amet etiam eget volutpat. Velit pretium dictumst id sit elit euismod. Id faucibus tellus vitae accumsan bibendum in maecenas tellus. Phasellus malesuada dui vel nibh ultricies fermentum nec tempor sapien. Arcu nisl at id morbi. Ullamcorper gravida ut aenean massa venenatis malesuada lectus nunc.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+<!--СТРАНИЦА ПЛАНИРОВКИ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <main>
+            <!--Секция планировка//////////////////-->
+            <section>
+                <div class="flex column-flex content">
+                    <h1 class="one-jk-title">1-к.кв. ЖК «...»</h1>
+
+                    <div class="flex row-flex  plan-filter-main-box">
+                        <ul class="flex row-flex plan-filter-box">
+                            <li>
+                                <a class="text-size14">Добавлено 01.01.2024 г.</a>
+                            </li>
+                            <li>
+                                <a class="text-size14">Обновлено 01.01.2024 г.</a>
+                            </li>
+                        </ul>
+
+                        <ul class="flex row-flex plan-filter-icon-box">
+                            <li>
+                                <a>
+                                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.840513 8.39942C0.942574 8.34817 1.28783 8.20089 1.39307 8.15655C2.58357 7.65502 10.4314 4.34824 13.2971 3.12276C14.2754 2.68629 17.1764 1.46044 18.1783 1.0378C18.4094 0.940325 18.6388 0.839838 18.8842 0.788127C19.4176 0.675754 20.342 0.661054 20.2308 1.95448C20.179 2.69796 19.7651 5.29997 19.3512 8.11446C18.9443 10.7241 18.5152 13.4933 18.2677 15.0926C18.1275 15.9985 18.1953 17.0831 17.4935 17.6728C17.3784 17.7696 17.2402 17.8454 17.0744 17.8855C16.1948 18.0979 14.7459 17.1421 14.4873 16.9296C14.2802 16.7703 10.6065 14.3806 9.26115 13.2124C8.89893 12.8938 8.485 12.2566 9.31285 11.5131C11.1757 9.76067 13.4006 7.58346 14.7459 6.20278C15.3669 5.56551 15.9878 4.07863 13.4006 5.88411C10.4375 7.98288 7.50794 9.97799 6.4855 10.6713C6.23098 10.8439 5.9743 11.0183 5.67657 11.0953C5.28406 11.1968 4.62663 11.2597 3.72458 10.982C3.32132 10.8579 2.90061 10.723 2.49872 10.5913C1.07356 10.1243 -0.499733 9.07238 0.840513 8.39942Z" fill="#CE3A13"/>
+                                    </svg> 
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.75769 20.9159C2.64305 21.4802 0.71046 19.5438 1.27889 17.4303C1.47099 16.716 1.36112 15.9615 1.07181 15.2807C0.206623 13.2449 -0.0195185 10.9844 0.439349 8.80223C0.977667 6.24227 2.42263 3.96197 4.50909 2.37977C6.59555 0.797569 9.18355 0.0196042 11.7982 0.188631C14.4128 0.357657 16.8787 1.46234 18.7434 3.29996C20.608 5.13758 21.7463 7.58488 21.9495 10.1928C22.1526 12.8007 21.4069 15.3942 19.8492 17.4975C18.2915 19.6008 16.0263 21.0728 13.4693 21.6433C11.2856 22.1305 9.01423 21.9324 6.96107 21.0912C6.282 20.8129 5.53376 20.7088 4.82471 20.898L4.75769 20.9159ZM5.80256 18.5167C6.06597 18.4466 6.34649 18.4854 6.58102 18.6243C8.25157 19.6129 10.2027 20.0219 12.1305 19.7878C14.0582 19.5537 15.8542 18.6895 17.2386 17.3299C18.6231 15.9703 19.5181 14.1917 19.7843 12.2713C20.0505 10.3508 19.6728 8.39642 18.7102 6.71262C17.7477 5.02881 16.2542 3.71019 14.4626 2.96224C12.671 2.21429 10.6818 2.07903 8.80516 2.57753C6.9285 3.07604 5.26973 4.18031 4.08734 5.71825C2.90495 7.2562 2.26536 9.14143 2.26824 11.0802C2.26667 12.6877 2.71199 14.2641 3.55462 15.634C3.70146 15.8756 3.74293 16.1669 3.66937 16.44L3.60956 16.662C3.29505 17.8295 4.362 18.8999 5.53052 18.5891L5.80256 18.5167Z" fill="#CE3A13"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8227 13.007C15.3737 12.6913 14.9129 12.3529 14.3776 12.231C13.8423 12.1092 13.2906 12.3546 12.9911 12.8147C12.8639 13.0101 12.7489 13.2109 12.6339 13.3503C12.5789 13.4261 12.498 13.4793 12.4065 13.4999C12.3149 13.5205 12.219 13.507 12.1367 13.462C10.7588 12.9231 9.58852 11.9657 8.78892 10.7289C8.67186 10.5479 8.50886 10.3648 8.52944 10.1501C8.53988 10.0414 8.59218 9.94086 8.67534 9.86981C8.8063 9.74038 8.9216 9.59706 9.01944 9.44285C9.25845 9.06614 9.34243 8.60116 9.23729 8.16759C9.14024 7.76739 8.96841 7.38381 8.7658 7.02531C8.71353 6.93283 8.65623 6.84329 8.59417 6.75712C8.31714 6.37245 7.88004 6.0676 7.41147 6.1394C7.1744 6.17573 6.95291 6.27976 6.77374 6.43896C6.46269 6.70688 6.2158 7.04104 6.05125 7.41684C5.8867 7.79263 5.80869 8.20049 5.82294 8.61038C5.8239 8.84056 5.85312 9.06975 5.90995 9.29283C6.05425 9.8288 6.27616 10.3409 6.56867 10.8128C6.77971 11.1744 7.00997 11.5243 7.25846 11.8613C8.06605 12.9681 9.0812 13.9078 10.2476 14.6283C10.8329 14.9945 11.4584 15.2921 12.1119 15.5155C12.7907 15.8227 13.5402 15.9406 14.2807 15.8567C14.7026 15.793 15.1024 15.6267 15.4448 15.3724C15.7873 15.1182 16.0618 14.7838 16.2444 14.3988C16.3517 14.1662 16.3843 13.9061 16.3377 13.6543C16.2802 13.3899 16.0705 13.1811 15.8227 13.007Z" fill="#CE3A13"/>
+                                    </svg> 
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 12C19.49 10.54 21 8.79 21 6.5C21 5.04131 20.4205 3.64236 19.3891 2.61091C18.3576 1.57946 16.9587 1 15.5 1C13.74 1 12.5 1.5 11 3C9.5 1.5 8.26 1 6.5 1C5.04131 1 3.64236 1.57946 2.61091 2.61091C1.57946 3.64236 1 5.04131 1 6.5C1 8.8 2.5 10.55 4 12L11 19L18 12Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                     
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 13V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V13" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5 8L10 13L15 8" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 13V1" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex row-flex">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 7H9C7.89543 7 7 7.89543 7 9V19C7 20.1046 7.89543 21 9 21H19C20.1046 21 21 20.1046 21 19V9C21 7.89543 20.1046 7 19 7Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M3 15C1.9 15 1 14.1 1 13V3C1 1.9 1.9 1 3 1H13C14.1 1 15 1.9 15 3" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>В сравнение</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex row-flex plan-general-info">
+                        <div class="swiper plan-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div><img src="img/photo/Plan-studia.png"></div>
+                                </div>  
+                                <div class="swiper-slide">
+                                    <div><img src="img/photo/Plan-studia.png"></div>
+                                </div>             
+                            </div>
+                            
+                            <div class="swiper-button-next"><img src="img/icon/Frame 3b.svg"></div>
+                            <div class="swiper-button-prev"><img src="img/icon/Frame 4b.svg"></div>
+                        </div>
+
+                        <script>
+                            var swiper = new Swiper(".plan-swiper", {
+                                loop: true,
+                                spaceBetween: 40,
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                            });
+                        </script>
+
+                        <div class="flex column-flex plan-info-box">
+                            <ul class="flex column-flex plan-info-text-box">
+                                <li class="flex row-flex">
+                                    <p class="light-gray-text">Застройщик</p>
+                                    <p class="medium-text">ГК "КВС"</p>
+                                </li>
+                                <li class="flex row-flex">
+                                    <p class="light-gray-text">Старт продаж</p>
+                                    <p class="medium-text">Март 2024 - корпус 1 «Кот-Баюн»</p>
+                                </li>
+                                <li class="flex row-flex">
+                                    <p class="light-gray-text">Срок сдачи дома</p>
+                                    <p class="medium-text">Заселен - 1 кв. 2027</p>
+                                </li>
+                                <li class="flex row-flex">
+                                    <p class="light-gray-text">Тип дома</p>
+                                    <p class="medium-text">Газобетон-монолит</p>
+                                </li>
+                            </ul>
+
+                            <div class="flex row-flex plan-info-btn-box">
+                                <a class="btn btn-gray">Контакты</a>
+                                <a class="btn btn-orange">Рассчитать ипотеку онлайн</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section><h1>Тут какойто блок с картой, Он нужен???</h1></section>
+            
+            <!--Секция Обратной связи/////////////////-->
+            <section class="content">
+                <div class="flex row-flex feedback-box">
+                    <div class="flex column-flex feedback-left-box">
+                        <h2 class="white-text">Ваш персональный менеджер</h2>
+                        <p class="white-text text-size20">Наш менеджер с радостью ответит<br> на все ваши вопросы</p>
+                        <div class="flex row-flex feedback-personal-manager-box">
+                            <div class="feedback-personal-manager-photo"><img src="img/photo/employee.png"></div>
+                            <div class="flex column-flex feedback-personal-manager-text">
+                                <p class="text-size18 medium-text white-text">Мария Ковалева</p>
+                                <p class="text-size14 white-text">+7 (905) 930-31-13</p>
+                                <p class="text-size14 white-text">info-azr@yandex.ru</p>
+                                <p class="text-size14 white-text">Пн-Пт 10:00-19:00 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex column-flex feedback-right-box">
+                        <div class="flex row-flex feedback-input-box">
+                            <input type="text">
+                            <input type="tel">
+                            <input type="text">
+                        </div>
+                        <div class="flex row-flex feedback-check-box">
+                            <input type="checkbox">
+                            <label class="white-text">Я согласен с Политикой конфиденциальности</label>
+                        </div>
+                        <a class="btn btn-gray">Заказать звонок</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+<!--ВЫБОР КВАРТИРЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <main>
+            <!--Секция Фильтров/////////////////-->
+            <section>
+                <div class="flex column-flex content apartment-filter-section">
+                    <h1>Выбрать квартиру</h1>
+                    <div class="flex column-flex apartment-filter-box">
+                        <div class="flex row-flex apartment-filter-top-box">
+                            <div class="flex column-flex apartment-filter-choose-jk">
+                                <p>Выберите ЖК</p>
+                                <form id="form-sorter" class="apartment-filter-form">
+                                    <select>
+                                        <option><p>ЖК "Balance"</p></option>
+                                        <option><p>ЖК "Balance"</p></option>
+                                        <option><p>ЖК "Balance"</p></option>
+                                    </select>
+                                </form>
+                            </div>
+                            
+                            <div class="flex column-flex apartment-filter-storey-price">
+                                <p>Стоимость объекта, ₽</p>
+                                <input type="text">
+                            </div>
+
+                            <div class="flex column-flex apartment-filter-storey-price">
+                                <p>Введите этаж</p>
+                                <input type="text">
+                            </div>
+
+                            <div class="flex column-flex apartment-filter-rooms">
+                                <p>Количество комнат</p>
+                                <ul class="flex row-flex apartment-filter-rooms-box">
+                                    <li class="flex apartment-filter-rooms-item apartment-filter-rooms-checked">
+                                        <p>Студия</p>
+                                    </li>
+                                    <li class="flex apartment-filter-rooms-item">
+                                        <p>1</p>
+                                    </li>
+                                    <li class="flex apartment-filter-rooms-item">
+                                        <p>2</p>
+                                    </li>
+                                    <li class="flex apartment-filter-rooms-item">
+                                        <p>3</p>
+                                    </li>
+                                    <li class="flex apartment-filter-rooms-item">
+                                        <p>4</p>
+                                    </li>
+                                    <li class="flex apartment-filter-rooms-item">
+                                        <p>5</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!--<div>
+                            <div>
+                                <p></p>
+                                <ul>
+                                    <li>
+                                        <p></p>
+                                    </li>
+                                    <li>
+                                        <p></p>
+                                    </li>
+                                    <li>
+                                        <p></p>
+                                    </li>
+                                    <li>
+                                        <p></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>-->
+
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+<!--ФУТЕР ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <footer class="flex column-flex footer">
+            <div class="flex row-flex footer-top-box content">
+                <div class="flex column-flex footer-top-item">
+                    <div class="footer-logo"><img src="img/photo/image 6.png"></div>
+                    <div class="flex column-flex footer-feedback">
+                        <p>Есть вопросы?</p>
+                        <a class="btn btn-orange">Позвоните нам</a>
+                    </div>
+                </div>
+                
+                <ul class="flex column-flex footer-top-item">
+                    <li>
+                        <a class="medium-text text-size18">Проекты</a>
+                    </li>
+                    <li>
+                        <a class="medium-text text-size18">О компании</a>
+                    </li>
+                    <li>
+                        <a class="medium-text text-size18">Выбрать квартиру</a>
+                    </li>
+                    <li>
+                        <a class="medium-text text-size18">Ипотека</a>
+                    </li>
+                    <li>
+                        <a class="medium-text text-size18">Ипотечный калькулятор</a>
+                    </li>
+                </ul>
+
+                <div class="flex column-flex footer-top-item">
+                    <a><h2>+7 (905) 930-31-13</h2></a>
+                    <a>info-azr@yandex.ru</a>
+                    <p>Ежедневно с 9:00 до 18:00</p>
+                </div>
+            </div>
+
+            <div class="flex row-flex content footer-bottom-box">
+                <a class="footer-bottom-item light-gray-text text-size18">Политика конфиденциальности</a>
+                <div class="footer-bottom-item"></div>
+                <div class="flex row-flex footer-bottom-item">
+                    <div class="footer-social"><img src="img/icon/Telegram.png"></div>
+                    <div class="footer-social"><img src="img/icon/Whatsapp.png"></div>
+                    <div class="footer-social"><img src="img/icon/Gmail.png"></div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="javascript.js"></script>
+    </body>
+</html>
