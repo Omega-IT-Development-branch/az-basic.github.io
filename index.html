@@ -13,12 +13,12 @@
         <link rel="stylesheet" href="style768.css" />
         <link rel="stylesheet" href="style480.css" />
 
-        </head>
+    </head>
     <body>
 <!--ХЕДЕР /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
         <header class="wrapper">
             <div class="content flex row-flex header-box">
-                <div class="logo-head"><img src="img/photo/image 6.png"></div>
+                <a class="logo-head"><img src="img/photo/image 6.png"></a>
                 <nav class="flex row-flex nav-head">
                     <ul class="flex row-flex nav-head-box">
                         <li>
@@ -140,7 +140,7 @@
 
                 <div class="swiper jk-Swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <a class="swiper-slide">
                             <div class="flex column-flex slider-one-jk-box">
                                 <div class="flex column-flex slider-one-jk-photo-box">
                                     <img src="img/photo/Rectangle 3.png">
@@ -181,7 +181,7 @@
                                     <p class="light-gray-text text-size12">Квартир: 900</p>
                                 </div>
                             </div>
-                        </div>           
+                        </a>           
                     </div>
                     
                     <div class="swiper-button-next"><img src="img/icon/Frame 3.png"></div>
@@ -248,10 +248,12 @@
                             <input type="tel">
                         </div>
                         <div class="flex row-flex feedback-check-box">
-                            <input type="checkbox">
-                            <label class="white-text">Я согласен с Политикой конфиденциальности</label>
+                            <div class="checkbox-rect">
+                                <input type="checkbox" id="checkbox-rect1" name="check">
+                                <label class="white-text" for="checkbox-rect1">Я согласен с Политикой конфиденциальности</label>
+                            </div>
                         </div>
-                        <a class="btn btn-gray">Заказать звонок</a>
+                        <a class="btn btn-full-gray">Заказать звонок</a>
                     </div>
                 </div>
             </section>
@@ -300,27 +302,28 @@
                     </div>
                 </div>
             </section>
-
+            <!--Секция нам доверяют /////////////-->
             <section>
-                <div class="flex column-flex content company-box">
-                    <h2>Нам доверяют</h2>
+                <div class="flex column-flex company-box">
+                    <h2 class="content">Нам доверяют</h2>
 
-                        <div class="swiper company-Swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
-                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 3.png"></div>
-                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 3.png"></div>
-                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
-                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 3.png"></div>
-                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
-                                <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
-                            </div>
+                    <div class="swiper company-Swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
+                            <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 3.png"></div>
+                            <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 3.png"></div>
+                            <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
+                            <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 3.png"></div>
+                            <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
+                            <div class="swiper-slide company-swiper-slide"><img src="img/photo/image 1.png"></div>
+                        </div>
                     </div>
 
                     <script>
                         var swiper = new Swiper(".company-Swiper", {
-                            slidesPerView: 4.7,
-                            spaceBetween: 40,
+                            loop: true,
+                            slidesPerView: 5,
+                            spaceBetween: 20,
                             navigation: {
                                 nextEl: ".swiper-button-next",
                                 prevEl: ".swiper-button-prev",
@@ -331,7 +334,6 @@
             </section>
         </main>
 <!--СТРАНИЦА ПРОЕКТЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
         <main>
             <!--Секция с проектами//////////////////-->
             <section>
@@ -339,13 +341,18 @@
                     <div class="flex row-flex project-head-box">
                         <h2>Все проекты</h2>
                         <div class="flex row-flex project-head-sorter">
-                            <form id="form-sorter" class="one-jk-sorted-form">
+
+                            <div class="custom-select" style="width:200px;">
                                 <select>
-                                    <option><p>По умолчанию</p></option>
-                                    <option><p>Сначала дешевые</p></option>
-                                    <option><p>Сначала дорогие</p></option>
+                                  <option value="0">
+                                    <p>По умолчанию</p>          
+                                </option>
+                                  <option value="1">По умолчанию</option>
+                                  <option value="2">Возрастание</option>
+                                  <option value="3">Убывание</option>
                                 </select>
-                            </form>
+                            </div>
+
                             <div class="switch">
                                 <input class="project-switch-input" type="checkbox" id="switch" />
                                 <label class="project-switch-label" for="switch"></label>
@@ -372,92 +379,96 @@
                     <!--Плиточный вид-->
                     <ul class="flex row-flex project-tile-box">
                         <li class="flex column-flex slider-one-jk-box">
-                            <div class="flex column-flex slider-one-jk-photo-box">
-                                <img src="img/photo/Rectangle 3.png">
-                                <div class="flex row-flex slider-one-jk-photo-text">
-                                    <p class="text-size12">Новостройки</p>
-                                    <p class="text-size12">Вторички</p>
+                            <a class="flex column-flex slider-one-jk-box">
+                                <div class="flex column-flex slider-one-jk-photo-box">
+                                    <img src="img/photo/Rectangle 3.png">
+                                    <div class="flex row-flex slider-one-jk-photo-text">
+                                        <p class="text-size12">Новостройки</p>
+                                        <p class="text-size12">Вторички</p>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="flex column-flex slider-one-jk-info">
-                                <p class="medium-text text-size18">Наименование ЖК</p>
-                                <p class="dark-gray-text text-size14">Расположение</p>
-                            </div>
+                                <div class="flex column-flex slider-one-jk-info">
+                                    <p class="medium-text text-size18">Наименование ЖК</p>
+                                    <p class="dark-gray-text text-size14">Расположение</p>
+                                </div>
 
-                            <ul class="flex column-flex slider-one-jk-info">
-                                <li class="flex row-flex slider-one-jk-info-appartament">
-                                    <p>Студии</p>
-                                    <p>от 5 000 000</p>
-                                </li>
-                                <li class="flex row-flex slider-one-jk-info-appartament">
-                                    <p>1-к. кв.</p>
-                                    <p>от 5 000 000</p>
-                                </li>
-                                <li class="flex row-flex slider-one-jk-info-appartament">
-                                    <p>2-к. кв.</p>
-                                    <p>от 5 000 000</p>
-                                </li>
-                                <li class="flex row-flex slider-one-jk-info-appartament">
-                                    <p>3-к. кв.</p>
-                                    <p>от 5 000 000</p>
-                                </li>
-                            </ul>
-                            
-                            <p>Сдан в 3кв. 2023 г.</p>
+                                <ul class="flex column-flex slider-one-jk-info">
+                                    <li class="flex row-flex slider-one-jk-info-appartament">
+                                        <p>Студии</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                    <li class="flex row-flex slider-one-jk-info-appartament">
+                                        <p>1-к. кв.</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                    <li class="flex row-flex slider-one-jk-info-appartament">
+                                        <p>2-к. кв.</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                    <li class="flex row-flex slider-one-jk-info-appartament">
+                                        <p>3-к. кв.</p>
+                                        <p>от 5 000 000</p>
+                                    </li>
+                                </ul>
+                                
+                                <p>Сдан в 3кв. 2023 г.</p>
 
-                            <div class="flex column-flex slider-one-jk-low-info">
-                                <p class="light-gray-text text-size12">Застройщик: ГК «»</p>
-                                <p class="light-gray-text text-size12">Квартир: 900</p>
-                            </div>
-                        </li>
+                                <div class="flex column-flex slider-one-jk-low-info">
+                                    <p class="light-gray-text text-size12">Застройщик: ГК «»</p>
+                                    <p class="light-gray-text text-size12">Квартир: 900</p>
+                                </div>
+                            </a>
+                        </li>               
                     </ul>
 
                     <!--Список вид-->
                     <ul class="flex column-flex project-list-box">
                         <li class="flex row-flex project-list-item">
-                            <div class="project-list-photo"><img src="img/photo/Rectangle 16.png"></div>
+                            <a class="flex row-flex project-list-item">
+                                <div class="project-list-photo"><img src="img/photo/Rectangle 16.png"></div>
 
-                            <div class="flex row-flex project-list-text">
-                                <div class="flex column-flex project-list-jk-info-box">
-                                    <div class="flex column-flex project-list-jk-main-info">
-                                        <p class="bold-text text-size18">Наименование ЖК</p>
-                                        <p class="dark-gray-text text-size14">Расположение</p>
+                                <div class="flex row-flex project-list-text">
+                                    <div class="flex column-flex project-list-jk-info-box">
+                                        <div class="flex column-flex project-list-jk-main-info">
+                                            <p class="bold-text text-size18">Наименование ЖК</p>
+                                            <p class="dark-gray-text text-size14">Расположение</p>
+                                        </div>
+                                        <div class="flex row-flex project-list-jk-btn-text">
+                                            <p class="text-size12">Новостройки</p>
+                                            <p class="text-size12">Вторички</p>
+                                        </div>
                                     </div>
-                                    <div class="flex row-flex project-list-jk-btn-text">
-                                        <p class="text-size12">Новостройки</p>
-                                        <p class="text-size12">Вторички</p>
+        
+                                    <div class="flex column-flex project-list-jk-low-info-box">
+                                        <p class="medium-text">Сдан в 3кв. 2023 г.</p>
+        
+                                        <div class="flex column-flex project-list-jk-low-info">
+                                            <p class="light-gray-text text-size14">Застройщик: ГК «»</p>
+                                            <p class="light-gray-text text-size14">Квартир: 900</p>
+                                        </div>
                                     </div>
+        
+                                    <ul class="flex column-flex project-list-jk-info">
+                                        <li class="flex row-flex project-list-jk-info-appartament">
+                                            <p>Студии</p>
+                                            <p>от 5 000 000</p>
+                                        </li>
+                                        <li class="flex row-flex project-list-jk-info-appartament">
+                                            <p>1-к. кв.</p>
+                                            <p>от 5 000 000</p>
+                                        </li>
+                                        <li class="flex row-flex project-list-jk-info-appartament">
+                                            <p>2-к. кв.</p>
+                                            <p>от 5 000 000</p>
+                                        </li>
+                                        <li class="flex row-flex project-list-jk-info-appartament">
+                                            <p>3-к. кв.</p>
+                                            <p>от 5 000 000</p>
+                                        </li>
+                                    </ul>
                                 </div>
-    
-                                <div class="flex column-flex project-list-jk-low-info-box">
-                                    <p class="medium-text">Сдан в 3кв. 2023 г.</p>
-    
-                                    <div class="flex column-flex project-list-jk-low-info">
-                                        <p class="light-gray-text text-size14">Застройщик: ГК «»</p>
-                                        <p class="light-gray-text text-size14">Квартир: 900</p>
-                                    </div>
-                                </div>
-    
-                                <ul class="flex column-flex project-list-jk-info">
-                                    <li class="flex row-flex project-list-jk-info-appartament">
-                                        <p>Студии</p>
-                                        <p>от 5 000 000</p>
-                                    </li>
-                                    <li class="flex row-flex project-list-jk-info-appartament">
-                                        <p>1-к. кв.</p>
-                                        <p>от 5 000 000</p>
-                                    </li>
-                                    <li class="flex row-flex project-list-jk-info-appartament">
-                                        <p>2-к. кв.</p>
-                                        <p>от 5 000 000</p>
-                                    </li>
-                                    <li class="flex row-flex project-list-jk-info-appartament">
-                                        <p>3-к. кв.</p>
-                                        <p>от 5 000 000</p>
-                                    </li>
-                                </ul>
-                            </div>
+                            </a>
                         </li>
                     </ul>
 
@@ -474,39 +485,39 @@
                     <h1 class="one-jk-title">Наименование ЖК</h1>
 
                     <ul class="flex row-flex one-jk-filter-box">
-                        <li class="one-jk-filter-item-select">
-                            <a class="text-size14">Квартиры</a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Паркинг</a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Коммерция <span>New</span></a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Карта</a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Об объекте</a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Видео</a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Отделка</a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Ход строительства</a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Файлы</a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Акции <span>New</span></a>
-                        </li>
-                        <li>
-                            <a class="text-size14">Ипотека</a>
-                        </li>
+                        <a class="flex row-flex"><li class="one-jk-filter-item-select">
+                            <p class="text-size14">Квартиры</p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Паркинг</p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Коммерция <span>New</span></p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Карта</p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Об объекте</p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Видео</p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Отделка</p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Ход строительства</p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Файлы</p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Акции <span>New</span></p>
+                        </li></a>
+                        <a class="flex row-flex"><li>
+                            <p class="text-size14">Ипотека</p>
+                        </li></a>     
                     </ul>
 
                     <div class="flex row-flex one-jk-general-info">
@@ -561,12 +572,14 @@
                         </div>
 
                         <div class="flex column-flex one-jk-info-box">
-                            <form id="form-corpus" class="one-jk-info-select-form">
+                            <div class="custom-select">
                                 <select>
-                                    <option><p class="text-size18">Корпус <span class="orange-text">&#183;</span> Сдан в 2кв. 2023г.</p></option>
-                                    <option><p class="text-size18">Корпус <span class="orange-text">&#183;</span> Сдан в 1кв. 2013г.</p></option>
+                                  <option value="0">По умолчанию</option>
+                                  <option value="1">По умолчанию</option>
+                                  <option value="2">Возрастание</option>
+                                  <option value="3">Убывание</option>
                                 </select>
-                            </form>
+                            </div>
 
                             <ul class="flex column-flex one-jk-info-text-box">
                                 <li class="flex row-flex">
@@ -612,27 +625,50 @@
                             <div class="flex row-flex search-one-jk-btn-left-box">
                                 <div class="flex row-flex search-one-jk-two-btn">
                                     <a class="flex row-flex">
-                                        <div class="icon"><img src="img/icon/list.svg"></div>
+                                        <div class="icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 6H21" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8 12H21" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8 18H21" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3 6H3.01" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3 12H3.01" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3 18H3.01" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>      
+                                        </div>
                                         <p>Таблицы</p>
                                     </a>
                                     <a class="flex row-flex one-jk-select-btn">
-                                        <div class="icon"><img src="img/icon/layout-dashboard.svg"></div>
+                                        <div class="icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 3H4C3.44772 3 3 3.44772 3 4V11C3 11.5523 3.44772 12 4 12H9C9.55228 12 10 11.5523 10 11V4C10 3.44772 9.55228 3 9 3Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M20 3H15C14.4477 3 14 3.44772 14 4V7C14 7.55228 14.4477 8 15 8H20C20.5523 8 21 7.55228 21 7V4C21 3.44772 20.5523 3 20 3Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M20 12H15C14.4477 12 14 12.4477 14 13V20C14 20.5523 14.4477 21 15 21H20C20.5523 21 21 20.5523 21 20V13C21 12.4477 20.5523 12 20 12Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M9 16H4C3.44772 16 3 16.4477 3 17V20C3 20.5523 3.44772 21 4 21H9C9.55228 21 10 20.5523 10 20V17C10 16.4477 9.55228 16 9 16Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>  
+                                        </div>
                                         <p>Планировки</p>
                                     </a>
                                 </div>
                                 <a class="flex row-flex one-jk-gray-btn">
-                                    <div class="icon"><img src="img/icon/layout-template.svg"></div>
+                                    <div class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 3H4C3.44772 3 3 3.44772 3 4V9C3 9.55228 3.44772 10 4 10H20C20.5523 10 21 9.55228 21 9V4C21 3.44772 20.5523 3 20 3Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M11 14H4C3.44772 14 3 14.4477 3 15V20C3 20.5523 3.44772 21 4 21H11C11.5523 21 12 20.5523 12 20V15C12 14.4477 11.5523 14 11 14Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M20 14H17C16.4477 14 16 14.4477 16 15V20C16 20.5523 16.4477 21 17 21H20C20.5523 21 21 20.5523 21 20V15C21 14.4477 20.5523 14 20 14Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                            
+                                    </div>
                                     <p>Квартиры в шахматке</p>
                                 </a>
                             </div>
 
-                            <form id="form-sorter" class="one-jk-sorted-form">
+                            <div class="custom-select">
                                 <select>
-                                    <option><p>По умолчанию</p></option>
-                                    <option><p>Сначала дешевые</p></option>
-                                    <option><p>Сначала дорогие</p></option>
+                                  <option value="0">По умолчанию</option>
+                                  <option value="1">По умолчанию</option>
+                                  <option value="2">Возрастание</option>
+                                  <option value="3">Убывание</option>
                                 </select>
-                            </form>
+                            </div>
                         </div>          
                     </div>
 
@@ -722,18 +758,18 @@
                 <div class="flex column-flex content">
                     <iframe class="one-jk-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Abac6208159f89148cf40c35d28929e72ef43a41f095e3213ca780b816f33f0a9&amp;source=constructor" width="873" height="400" frameborder="0"></iframe>
                     <div class="flex row-flex one-jk-map-btn-box">
-                        <a class="flex row-flex">
+                        <div class="flex row-flex">
                             <div><img></div>
                             <p>Супермаркет</p>
-                        </a>
-                        <a class="flex row-flex">
+                        </div>
+                        <div class="flex row-flex">
                             <div><img></div>
                             <p>Детский сад</p>
-                        </a>
-                        <a class="flex row-flex">
+                        </div>
+                        <div class="flex row-flex">
                             <div><img></div>
                             <p>Школа</p>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -784,38 +820,38 @@
                     <div class="flex row-flex  plan-filter-main-box">
                         <ul class="flex row-flex plan-filter-box">
                             <li>
-                                <a class="text-size14">Добавлено 01.01.2024 г.</a>
+                                <p class="text-size14">Добавлено 01.01.2024 г.</p>
                             </li>
                             <li>
-                                <a class="text-size14">Обновлено 01.01.2024 г.</a>
+                                <p class="text-size14">Обновлено 01.01.2024 г.</p>
                             </li>
                         </ul>
 
                         <ul class="flex row-flex plan-filter-icon-box">
                             <li>
-                                <a>
-                                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <a class="flex">
+                                    <svg width="20" height="20" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.840513 8.39942C0.942574 8.34817 1.28783 8.20089 1.39307 8.15655C2.58357 7.65502 10.4314 4.34824 13.2971 3.12276C14.2754 2.68629 17.1764 1.46044 18.1783 1.0378C18.4094 0.940325 18.6388 0.839838 18.8842 0.788127C19.4176 0.675754 20.342 0.661054 20.2308 1.95448C20.179 2.69796 19.7651 5.29997 19.3512 8.11446C18.9443 10.7241 18.5152 13.4933 18.2677 15.0926C18.1275 15.9985 18.1953 17.0831 17.4935 17.6728C17.3784 17.7696 17.2402 17.8454 17.0744 17.8855C16.1948 18.0979 14.7459 17.1421 14.4873 16.9296C14.2802 16.7703 10.6065 14.3806 9.26115 13.2124C8.89893 12.8938 8.485 12.2566 9.31285 11.5131C11.1757 9.76067 13.4006 7.58346 14.7459 6.20278C15.3669 5.56551 15.9878 4.07863 13.4006 5.88411C10.4375 7.98288 7.50794 9.97799 6.4855 10.6713C6.23098 10.8439 5.9743 11.0183 5.67657 11.0953C5.28406 11.1968 4.62663 11.2597 3.72458 10.982C3.32132 10.8579 2.90061 10.723 2.49872 10.5913C1.07356 10.1243 -0.499733 9.07238 0.840513 8.39942Z" fill="#CE3A13"/>
                                     </svg> 
                                 </a>
                             </li>
                             <li>
-                                <a>
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <a class="flex">
+                                    <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.75769 20.9159C2.64305 21.4802 0.71046 19.5438 1.27889 17.4303C1.47099 16.716 1.36112 15.9615 1.07181 15.2807C0.206623 13.2449 -0.0195185 10.9844 0.439349 8.80223C0.977667 6.24227 2.42263 3.96197 4.50909 2.37977C6.59555 0.797569 9.18355 0.0196042 11.7982 0.188631C14.4128 0.357657 16.8787 1.46234 18.7434 3.29996C20.608 5.13758 21.7463 7.58488 21.9495 10.1928C22.1526 12.8007 21.4069 15.3942 19.8492 17.4975C18.2915 19.6008 16.0263 21.0728 13.4693 21.6433C11.2856 22.1305 9.01423 21.9324 6.96107 21.0912C6.282 20.8129 5.53376 20.7088 4.82471 20.898L4.75769 20.9159ZM5.80256 18.5167C6.06597 18.4466 6.34649 18.4854 6.58102 18.6243C8.25157 19.6129 10.2027 20.0219 12.1305 19.7878C14.0582 19.5537 15.8542 18.6895 17.2386 17.3299C18.6231 15.9703 19.5181 14.1917 19.7843 12.2713C20.0505 10.3508 19.6728 8.39642 18.7102 6.71262C17.7477 5.02881 16.2542 3.71019 14.4626 2.96224C12.671 2.21429 10.6818 2.07903 8.80516 2.57753C6.9285 3.07604 5.26973 4.18031 4.08734 5.71825C2.90495 7.2562 2.26536 9.14143 2.26824 11.0802C2.26667 12.6877 2.71199 14.2641 3.55462 15.634C3.70146 15.8756 3.74293 16.1669 3.66937 16.44L3.60956 16.662C3.29505 17.8295 4.362 18.8999 5.53052 18.5891L5.80256 18.5167Z" fill="#CE3A13"/>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8227 13.007C15.3737 12.6913 14.9129 12.3529 14.3776 12.231C13.8423 12.1092 13.2906 12.3546 12.9911 12.8147C12.8639 13.0101 12.7489 13.2109 12.6339 13.3503C12.5789 13.4261 12.498 13.4793 12.4065 13.4999C12.3149 13.5205 12.219 13.507 12.1367 13.462C10.7588 12.9231 9.58852 11.9657 8.78892 10.7289C8.67186 10.5479 8.50886 10.3648 8.52944 10.1501C8.53988 10.0414 8.59218 9.94086 8.67534 9.86981C8.8063 9.74038 8.9216 9.59706 9.01944 9.44285C9.25845 9.06614 9.34243 8.60116 9.23729 8.16759C9.14024 7.76739 8.96841 7.38381 8.7658 7.02531C8.71353 6.93283 8.65623 6.84329 8.59417 6.75712C8.31714 6.37245 7.88004 6.0676 7.41147 6.1394C7.1744 6.17573 6.95291 6.27976 6.77374 6.43896C6.46269 6.70688 6.2158 7.04104 6.05125 7.41684C5.8867 7.79263 5.80869 8.20049 5.82294 8.61038C5.8239 8.84056 5.85312 9.06975 5.90995 9.29283C6.05425 9.8288 6.27616 10.3409 6.56867 10.8128C6.77971 11.1744 7.00997 11.5243 7.25846 11.8613C8.06605 12.9681 9.0812 13.9078 10.2476 14.6283C10.8329 14.9945 11.4584 15.2921 12.1119 15.5155C12.7907 15.8227 13.5402 15.9406 14.2807 15.8567C14.7026 15.793 15.1024 15.6267 15.4448 15.3724C15.7873 15.1182 16.0618 14.7838 16.2444 14.3988C16.3517 14.1662 16.3843 13.9061 16.3377 13.6543C16.2802 13.3899 16.0705 13.1811 15.8227 13.007Z" fill="#CE3A13"/>
                                     </svg> 
                                 </a>
                             </li>
                             <li>
-                                <a>
-                                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <a class="flex">
+                                    <svg width="20" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M18 12C19.49 10.54 21 8.79 21 6.5C21 5.04131 20.4205 3.64236 19.3891 2.61091C18.3576 1.57946 16.9587 1 15.5 1C13.74 1 12.5 1.5 11 3C9.5 1.5 8.26 1 6.5 1C5.04131 1 3.64236 1.57946 2.61091 2.61091C1.57946 3.64236 1 5.04131 1 6.5C1 8.8 2.5 10.55 4 12L11 19L18 12Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>                                     
                                 </a>
                             </li>
                             <li>
-                                <a>
+                                <a class="flex">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19 13V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V13" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M5 8L10 13L15 8" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -825,7 +861,7 @@
                             </li>
                             <li>
                                 <a class="flex row-flex">
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19 7H9C7.89543 7 7 7.89543 7 9V19C7 20.1046 7.89543 21 9 21H19C20.1046 21 21 20.1046 21 19V9C21 7.89543 20.1046 7 19 7Z" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M3 15C1.9 15 1 14.1 1 13V3C1 1.9 1.9 1 3 1H13C14.1 1 15 1.9 15 3" stroke="#CE3A13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -915,16 +951,17 @@
                             <input type="text">
                         </div>
                         <div class="flex row-flex feedback-check-box">
-                            <input type="checkbox">
-                            <label class="white-text">Я согласен с Политикой конфиденциальности</label>
+                            <div class="checkbox-rect">
+                                <input type="checkbox" id="checkbox-rect2" name="check">
+                                <label class="white-text" for="checkbox-rect2">Я согласен с Политикой конфиденциальности</label>
+                            </div>    
                         </div>
-                        <a class="btn btn-gray">Заказать звонок</a>
+                        <a class="btn btn-full-gray">Заказать звонок</a>
                     </div>
                 </div>
             </section>
         </main>
 <!--ВЫБОР КВАРТИРЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
         <main>
             <!--Секция Фильтров/////////////////-->
             <section>
@@ -933,78 +970,405 @@
                     <div class="flex column-flex apartment-filter-box">
                         <div class="flex row-flex apartment-filter-top-box">
                             <div class="flex column-flex apartment-filter-choose-jk">
-                                <p>Выберите ЖК</p>
-                                <form id="form-sorter" class="apartment-filter-form">
+                                <p class="light-gray-text text-size14">Выберите ЖК</p>
+                                <div class="custom-select custom-select-gray">
                                     <select>
-                                        <option><p>ЖК "Balance"</p></option>
-                                        <option><p>ЖК "Balance"</p></option>
-                                        <option><p>ЖК "Balance"</p></option>
+                                      <option value="0">По умолчанию</option>
+                                      <option value="1">По умолчанию</option>
+                                      <option value="2">Возрастание</option>
+                                      <option value="3">Убывание</option>
                                     </select>
-                                </form>
+                                </div>
                             </div>
                             
                             <div class="flex column-flex apartment-filter-storey-price">
-                                <p>Стоимость объекта, ₽</p>
+                                <p class="light-gray-text text-size14">Стоимость объекта, ₽</p>
                                 <input type="text">
                             </div>
 
                             <div class="flex column-flex apartment-filter-storey-price">
-                                <p>Введите этаж</p>
+                                <p class="light-gray-text text-size14">Введите этаж</p>
                                 <input type="text">
                             </div>
 
                             <div class="flex column-flex apartment-filter-rooms">
-                                <p>Количество комнат</p>
+                                <p class="light-gray-text text-size14">Количество комнат</p>
                                 <ul class="flex row-flex apartment-filter-rooms-box">
                                     <li class="flex apartment-filter-rooms-item apartment-filter-rooms-checked">
-                                        <p>Студия</p>
+                                        <p class="text-size12 medium-text white-text">Студия</p>
                                     </li>
                                     <li class="flex apartment-filter-rooms-item">
-                                        <p>1</p>
+                                        <p class="text-size12 medium-text white-text">1</p>
                                     </li>
                                     <li class="flex apartment-filter-rooms-item">
-                                        <p>2</p>
+                                        <p class="text-size12 medium-text white-text">2</p>
                                     </li>
                                     <li class="flex apartment-filter-rooms-item">
-                                        <p>3</p>
+                                        <p class="text-size12 medium-text white-text">3</p>
                                     </li>
                                     <li class="flex apartment-filter-rooms-item">
-                                        <p>4</p>
+                                        <p class="text-size12 medium-text white-text">4</p>
                                     </li>
                                     <li class="flex apartment-filter-rooms-item">
-                                        <p>5</p>
+                                        <p class="text-size12 medium-text white-text">5</p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-
-                        <!--<div>
-                            <div>
-                                <p></p>
-                                <ul>
-                                    <li>
-                                        <p></p>
+                        <div class="flex row-flex apartment-filter-top-box">
+                            <div class="flex column-flex apartment-filter-due-date">
+                                <p class="light-gray-text text-size14">Срок сдачи</p>
+                                <ul class="flex row-flex apartment-filter-due-date-box">
+                                    <li class="flex apartment-filter-due-date-item apartment-filter-due-date-checked">
+                                        <p class="text-size12 medium-text white-text">Сданы</p>
                                     </li>
-                                    <li>
-                                        <p></p>
+                                    <li class="flex apartment-filter-due-date-item">
+                                        <p class="text-size12 medium-text white-text">2023</p>
                                     </li>
-                                    <li>
-                                        <p></p>
+                                    <li class="flex apartment-filter-due-date-item">
+                                        <p class="text-size12 medium-text white-text">2024</p>
                                     </li>
-                                    <li>
-                                        <p></p>
+                                    <li class="flex apartment-filter-due-date-item">
+                                        <p class="text-size12 medium-text white-text">2025</p>
                                     </li>
                                 </ul>
                             </div>
-                        </div>-->
 
+                            <div class="flex column-flex apartment-filter-finishing">
+                                <p class="light-gray-text text-size14">Отделка</p>
+                                <ul class="flex column-flex apartment-filter-finishing-box">
+                                    <li class="flex row-flex apartment-filter-finishing-item">
+                                        <div class="checkbox-filter">
+                                            <input type="checkbox" id="checkbox-filter1" name="check">
+                                            <label class="text-size14" for="checkbox-filter1">Чистовая</label>
+                                        </div>
+                                    </li>
+                                    <li class="flex row-flex apartment-filter-finishing-item">
+                                        <div class="checkbox-filter">
+                                            <input type="checkbox" id="checkbox-filter2" name="check">
+                                            <label class="text-size14" for="checkbox-filter2">Под ключ</label>
+                                        </div>  
+                                    </li>                    
+                                </ul>
+                            </div>
 
+                            <div class="flex column-flex apartment-filter-type-house">
+                                <p class="light-gray-text text-size14">Тип дома</p>
+                                <ul class="flex row-flex apartment-filter-type-house-box">
+                                    <li class="flex row-flex apartment-filter-type-house-item">
+                                        <div class="checkbox-filter">
+                                            <input type="checkbox" id="checkbox-filter3" name="check">
+                                            <label class="text-size14" for="checkbox-filter3">Кирпичный</label>
+                                        </div>
+                                    </li>
+                                    <li class="flex row-flex apartment-filter-type-house-item">
+                                        <div class="checkbox-filter">
+                                            <input type="checkbox" id="checkbox-filter4" name="check">
+                                            <label class="text-size14" for="checkbox-filter4">Монолитный</label>
+                                        </div>
+                                    </li> 
+                                    <li class="flex row-flex apartment-filter-type-house-item">
+                                        <div class="checkbox-filter">
+                                            <input type="checkbox" id="checkbox-filter5" name="check">
+                                            <label class="text-size14" for="checkbox-filter5">Кирпично-монолитный</label>
+                                        </div>
+                                    </li>
+                                    <li class="flex row-flex apartment-filter-type-house-item">
+                                        <div class="checkbox-filter">
+                                            <input type="checkbox" id="checkbox-filter6" name="check">
+                                            <label class="text-size14" for="checkbox-filter6">Панельный</label>
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </div>
+
+                            <div class="flex row-flex apartment-filter-btn">
+                                <a class="flex row-flex">
+                                    <p class="text-size14">Очистить фильтр</p>
+                                    <div class="flex">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.0498 16.9497L16.9493 7.05021" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7.0498 7.05029L16.9493 16.9498" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a class="btn btn-gray">Показать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Секция Отфильтрованных квартир/////////////////-->
+            <section>
+                <div class="flex column-flex content choose-apartment">
+                    <div class="flex row-flex choose-apartment-head">
+                        <p>Планировка</p>
+                        <p>Стоимость</p>
+                        <p>Этаж</p>
+                        <p>Корпус, секция</p>
+                        <p>Сдача</p>
+                        <p>В продаже</p>
+                    </div>
+
+                    <ul class="flex column-flex choose-apartment-box">
+                        <li class="flex row-flex choose-apartment-item">
+                            <div class="flex column-flex">
+                                <img src="img/photo/Plan-studia.png">
+                                <p class="flex">100 кв. м.</p>
+                            </div>
+                            <p class="bold-text text-size18">5 000 000₽</p>
+                            <p class="bold-text text-size18">3 этаж</p>
+                            <p class="bold-text text-size18">1 корпус, 2 секция</p>
+                            <p class="bold-text text-size18">2 кв. 2025 г.</p>
+                            <p class="bold-text text-size18">15 квартир</p>
+                        </li>                   
+                    </ul>
+
+                    <a class="btn btn-gray">Показать еще</a>
+                </div>
+            </section>
+        </main>
+<!--ИПОТЕЧНЫЙ КАЛЬКУЛЯТОР ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <main>
+            <section>
+                <div class="flex column-flex content calculator">
+                    <h1>Ипотечный калькулятор</h1>
+                    <div class="flex row-flex">
+                        <div class="flex column-flex calculator-box">   
+                            <p class="light-gray-text text-size18">Стоимость объекта, ₽</p>
+
+                            <div class="flex column-flex">
+                                <input class="calculator-input">
+                            </div>
+
+                            <p class="light-gray-text text-size18">Первоначальный взнос, ₽</p>
+
+                            <div class="flex column-flex">
+                                <input class="calculator-input">
+                            </div>
+
+                            <p class="light-gray-text text-size18">Ипотечная программа</p>
+
+                            <div class="custom-select custom-select-gray">
+                                <select>
+                                  <option value="0">По умолчанию</option>
+                                  <option value="1">По умолчанию</option>
+                                  <option value="2">Возрастание</option>
+                                  <option value="3">Убывание</option>
+                                </select>
+                            </div>
+
+                            <div class="flex row-flex calculator-two-text">
+                                <p class="light-gray-text text-size18">Срок кредита</p>
+                                <p class="light-gray-text text-size18">до 30 лет</p>
+                            </div>
+
+                            <div class="flex column-flex">
+                                <input class="calculator-input">
+                            </div>
+    
+                            <div class="flex row-flex calculator-two-text">
+                                <p class="text-size18">Сумма кредита</p>
+                                <p class="bold-text text-size20">5 000 000₽</p>
+                            </div>
+
+                            <p class="light-gray-text text-size14">Приведенные расчеты носят предварительный характер. Окончательный расчет суммы кредита и размер ежемесячного платежа производятся банком после предоставления полного комплекта документов и проведения оценки платежеспособности клиента.</p>
+                        </div>
+
+                        <div class="flex column-flex calculator-result">
+                            <div class="flex row-flex calculator-result-head">
+                                <p class="light-gray-text">Банки-партнеры</p>
+                                <p class="light-gray-text">Ставка</p>
+                                <p class="light-gray-text">Первоначальный взнос</p>
+                                <p class="light-gray-text">Платеж, ₽/месяц</p>
+                            </div>
+
+                            <p class="text-size20 medium-text">Ипотека 6%</p>
+
+                            <ul class="flex column-flex calculator-result-box">
+                                <li class="flex row-flex calculator-result-item">
+                                    <div><img src="img/photo/vtb.png"></div>
+                                    <p class="text-size20 medium-text">от 0.01%</p>
+                                    <p class="text-size20 medium-text">от 15%</p>
+                                    <p class="text-size20 medium-text">77 801 ₽</p>
+                                </li>
+                                <li class="flex row-flex calculator-result-item">
+                                    <div><img src="img/photo/vtb.png"></div>
+                                    <p class="text-size20 medium-text">от 0.01%</p>
+                                    <p class="text-size20 medium-text">от 15%</p>
+                                    <p class="text-size20 medium-text">77 801 ₽</p>
+                                </li>                   
+                            </ul>
+
+                            <p class="text-size20 medium-text">Ипотека 6%</p>
+
+                            <ul class="flex column-flex calculator-result-box">
+                                <li class="flex row-flex calculator-result-item">
+                                    <div><img src="img/photo/vtb.png"></div>
+                                    <p class="text-size20 medium-text">от 0.01%</p>
+                                    <p class="text-size20 medium-text">от 15%</p>
+                                    <p class="text-size20 medium-text">77 801 ₽</p>
+                                </li>                 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Секция Обратной связи/////////////////-->
+            <section class="content">
+                <div class="flex row-flex feedback-box">
+                    <div class="flex column-flex feedback-left-box">
+                        <h2 class="white-text">Ваш персональный менеджер</h2>
+                        <p class="white-text text-size20">Наш менеджер с радостью ответит<br> на все ваши вопросы</p>
+                    </div>
+                    <div class="flex column-flex feedback-right-box">
+                        <div class="flex row-flex feedback-input-box">
+                            <input type="text">
+                            <input type="tel">
+                            <input type="text">
+                        </div>
+                        <div class="flex row-flex feedback-check-box">
+                            <div class="checkbox-rect">
+                                <input type="checkbox" id="checkbox-rect3" name="check">
+                                <label class="white-text" for="checkbox-rect3">Я согласен с Политикой конфиденциальности</label>
+                            </div>    
+                        </div>
+                        <a class="btn btn-full-gray">Заказать звонок</a>
                     </div>
                 </div>
             </section>
         </main>
+<!--ВСЕ ОБ ИПОТЕКЕ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <main>
+            <section>
+                <div class="flex column-flex content credit-info">
+                    <h1>Оформление ипотеки по гос программам</h1>
+                    <div class="flex row-flex credit-info-box">
+                        <p>
+                            Наш специалист подберет Вам наиболее выгодную программу, сопроводит на всех этапах: от сбора документов до выхода на сделку.
+                            <br><br>1. Ипотека с господдержкой – от 8%. Подходит для всех граждан РФ, желающих приобрести квартиру в новостройке, дома у юрлица или ИП, а также на строительство домов.
+                            <br>2. Семейная ипотека – от 6%. Подходит для семей, в которых за период с января 2018 по декабрь 2023 года родился первый и последующий ребенок, а также для семей с двумя детьми до 18 лет.
+                            <br>3. Сельская ипотека – от 3%. Подходит для приобретения таунхаусов и частных домов, размещенных на землях ИЖС, ДНП, СНТ, находящихся в сельской местности.
+                            <br>4. Военная ипотека – от 16,7%. Доступна для военнослужащих, при получении сертификата НИС (накопительно-ипотечной системы). Ипотека распространяется как на новостройки, так и на вторичное жилье.
+                            <br>5. Ипотека без первоначального взноса (процентная ставка зависит от программы кредитования) . Подходит тем категориям граждан, имеющим в собственности недвижимость.
+                            <br>6. Ипотека для IT-специалистов - от 5% . Подходит тем категориям граждан, работающих в IT-компании с аккредитацией Минцифры РФ более 3 месяцев.
+                            <br>7. Ипотека для иностранных граждан - от 16,7% , первоначальный взнос от 10,1%. Иностранцам ипотека доступна на новостройку, вторичное жилье, строительство и покупку дома, земли.
+                            <br>8. Ипотека для ИП и самозанятых - от 6% . Доступна любая программа, кроме IT-ипотеки..
+                            <br>Обращаясь в  компанию Ассоциация застройщиков, вы повысите вероятность получения положительного ипотечного решения и сэкономите собственное время.
+                        </p>
+                        <div class="flex column-flex credit-info-btn-box">
+                            <div><img src="img/photo/ipoteca.png"></div>
+                            <a class="btn btn-orange">Оставить заявку</a>
+                        </div>               
+                    </div>
 
+                    <div class="flex column-flex credit-info-doc">
+                        <h2>Список документов</h2>
+                        <div class="flex row-flex credit-info-doc-main-box">
+                            <ul class="flex column-flex credit-info-doc-box">
+                                <li class="flex column-flex credit-info-doc-item">
+                                    <p class="text-size18 bold-text orange-text">Документ, удостоверяющий личность</p>
+                                    <p class="text-size14">Паспорт гражданина Российской Федерации (оригинал)</p>
+                                </li>
+                                <li class="flex column-flex credit-info-doc-item">
+                                    <p class="text-size18 bold-text orange-text">Второй документ, удостоверяющий личность</p>
+                                    <p class="text-size14">СНИЛС — свидетельство о пенсионном страховании (обязательно)</p>     
+                                </li>
+                                <li class="flex column-flex credit-info-doc-item">
+                                    <p class="text-size18 bold-text orange-text">Документ, подтверждающий занятость</p>
+                                    <p class="text-size14">Копия трудовой книжки Заемщика, заверенная работодателем (с печатью компании-работодателя на каждой странице копии).</p>
+                                </li>
+                            </ul>
+
+                            <ul class="flex column-flex credit-info-doc-box">
+                                <li class="flex column-flex credit-info-doc-item">
+                                    <p class="text-size18 bold-text orange-text">Документ, подтверждающий доход</p>
+                                    <p class="text-size14">Справка с места работы по форме 2-НДФЛ о размере дохода за истекшие месяцы текущего календарного года или за фактически отработанное время на последнем месте работы.</p>
+                                </li>
+                                <li class="flex column-flex credit-info-doc-item">
+                                    <p class="text-size18 bold-text orange-text">Анкета банка</p>
+                                    <p class="text-size14">Также Заемщику необходимо предоставить заполненную анкету.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Секция Обратной связи/////////////////-->
+            <section class="content">
+                <div class="flex row-flex feedback-box">
+                    <div class="flex column-flex feedback-left-box">
+                        <h2 class="white-text">Ваш персональный менеджер</h2>
+                        <p class="white-text text-size20">Наш менеджер с радостью ответит<br> на все ваши вопросы</p>
+                    </div>
+                    <div class="flex column-flex feedback-right-box">
+                        <div class="flex row-flex feedback-input-box">
+                            <input type="text">
+                            <input type="tel">
+                            <input type="text">
+                        </div>
+                        <div class="flex row-flex feedback-check-box">
+                            <div class="checkbox-rect">
+                                <input type="checkbox" id="checkbox-rect4" name="check">
+                                <label class="white-text" for="checkbox-rect4">Я согласен с Политикой конфиденциальности</label>
+                            </div>    
+                        </div>
+                        <a class="btn btn-full-gray">Заказать звонок</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+<!--КОНТАКТЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <main>
+            <section>
+                <div class="flex column-flex contact content">
+                    <h1>Контакты</h1>
+                    <div class="flex row-flex contact-main-box">
+                        <div class="flex column-flex contact-text-box">
+                            <div class="flex column-flex contact-main-text">
+                                <h2 class="orange-text">+7 (905) 930-31-13</h2>
+                                <p class="text-size20 medium-text">info-azr@yandex.ru</p>
+                                <div class="flex column-flex">
+                                    <p class="text-size14 light-gray-text">Офис продаж:</p>
+                                    <p>г. Новосибирск, ул. Коммунистическая, д. 6</p>
+                                </div>
+                                <div class="flex column-flex">
+                                    <p class="text-size14 light-gray-text">График работы:</p>
+                                    <p>Понедельник - пятница: 9:00 - 18:00 </p>
+                                </div>
+                                <div class="flex row-flex contact-btn-box">
+                                    <a class="btn btn-gray">WhatsApp</a>
+                                    <a class="btn btn-gray">Telegram</a>
+                                    <a class="btn btn-gray">Заказать звонок</a>
+                                </div>
+                            </div>
+    
+                            <div class="flex row-flex feedback-personal-manager-box">
+                                <div class="feedback-personal-manager-photo"><img src="img/photo/employee.png"></div>
+                                <div class="flex column-flex feedback-personal-manager-text">
+                                    <p class="text-size18 medium-text">Мария Ковалева</p>
+                                    <p class="text-size14">+7 (905) 930-31-13</p>
+                                    <p class="text-size14">info-azr@yandex.ru</p>
+                                    <p class="text-size14">Пн-Пт 10:00-19:00 </p>
+                                </div>
+                            </div>
+    
+                            <p>Наш менеджер с радостью ответит на все ваши вопросы</p>
+    
+                            <a class="btn btn-gray">Задать вопрос</a>
+                        </div>
+
+                        <div class="flex column-flex contact-map-box">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A16bc4225dee6efa8ff08bc1e6a83b7fbeee22f047d615e7ad2d236a1c7630521&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 <!--ФУТЕР ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
         <footer class="flex column-flex footer">
             <div class="flex row-flex footer-top-box content">
@@ -1045,14 +1409,95 @@
                 <a class="footer-bottom-item light-gray-text text-size18">Политика конфиденциальности</a>
                 <div class="footer-bottom-item"></div>
                 <div class="flex row-flex footer-bottom-item">
-                    <div class="footer-social"><img src="img/icon/Telegram.png"></div>
-                    <div class="footer-social"><img src="img/icon/Whatsapp.png"></div>
-                    <div class="footer-social"><img src="img/icon/Gmail.png"></div>
+                    <a class="footer-social"><img src="img/icon/Telegram.png"></a>
+                    <a class="footer-social"><img src="img/icon/Whatsapp.png"></a>
+                    <a class="footer-social"><img src="img/icon/Gmail.png"></a>
                 </div>
             </div>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="javascript.js"></script>
+
+        <script>
+            var x, i, j, l, ll, selElmnt, a, b, c;
+            /*look for any elements with the class "custom-select":*/
+            x = document.getElementsByClassName("custom-select");
+            l = x.length;
+            for (i = 0; i < l; i++) {
+              selElmnt = x[i].getElementsByTagName("select")[0];
+              ll = selElmnt.length;
+              /*for each element, create a new DIV that will act as the selected item:*/
+              a = document.createElement("DIV");
+              a.setAttribute("class", "select-selected");
+              a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+              x[i].appendChild(a);
+              /*for each element, create a new DIV that will contain the option list:*/
+              b = document.createElement("DIV");
+              b.setAttribute("class", "select-items select-hide");
+              for (j = 1; j < ll; j++) {
+                /*for each option in the original select element,
+                create a new DIV that will act as an option item:*/
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function(e) {
+                    /*when an item is clicked, update the original select box,
+                    and the selected item:*/
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) {
+                      if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        yl = y.length;
+                        for (k = 0; k < yl; k++) {
+                          y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                      }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+              }
+              x[i].appendChild(b);
+              a.addEventListener("click", function(e) {
+                  /*when the select box is clicked, close any other select boxes,
+                  and open/close the current select box:*/
+                  e.stopPropagation();
+                  closeAllSelect(this);
+                  this.nextSibling.classList.toggle("select-hide");
+                  this.classList.toggle("select-arrow-active");
+                });
+            }
+            function closeAllSelect(elmnt) {
+              /*a function that will close all select boxes in the document,
+              except the current select box:*/
+              var x, y, i, xl, yl, arrNo = [];
+              x = document.getElementsByClassName("select-items");
+              y = document.getElementsByClassName("select-selected");
+              xl = x.length;
+              yl = y.length;
+              for (i = 0; i < yl; i++) {
+                if (elmnt == y[i]) {
+                  arrNo.push(i)
+                } else {
+                  y[i].classList.remove("select-arrow-active");
+                }
+              }
+              for (i = 0; i < xl; i++) {
+                if (arrNo.indexOf(i)) {
+                  x[i].classList.add("select-hide");
+                }
+              }
+            }
+            /*if the user clicks anywhere outside the select box,
+            then close all select boxes:*/
+            document.addEventListener("click", closeAllSelect);
+            </script>
     </body>
 </html>
