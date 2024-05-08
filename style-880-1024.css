@@ -1,0 +1,59 @@
+@media (min-width: 880px) and (max-width:1024px) {
+    section{
+        padding-bottom: 96px;
+    }
+    /* ХЕДЕР //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .logo-head{
+        width: 17%;
+    }
+    .nav-head{
+        align-items: center;
+        margin: 0 15px;
+        width: calc(66% - 20px);
+    }
+    .nav-head-box{
+        gap: 15px;
+        height: max-content;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .phone-header-box{
+        width: 17%;
+    }
+   
+    /*СТРАНИЦА ПЛАНИРОВКИ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .plan-general-info{
+        gap: 20px;
+    }
+    .plan-swiper{
+        width: calc(60% - 10px);
+    }
+    .plan-info-box{
+        width: calc(40% - 10px);
+    }
+    /*ВЫБОР КВАРТИРЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    /*Секция фильтра квартир*/
+    .apartment-filter-top-box{
+        gap: 8px;
+    }
+    .apartment-filter-choose-jk{
+        width: calc(21% - 16px);
+    }
+    .apartment-filter-storey-price{
+        width: calc(21% - 16px);
+    }
+    .apartment-filter-rooms{
+        width: calc(37%);
+    }
+    .apartment-filter-due-date{
+        width: calc(27% - 16px);
+    }
+    .apartment-filter-finishing{
+        width: calc(15% - 16px);
+    }
+    .apartment-filter-type-house{
+        width: calc(25% - 16px);
+    }
+    /*КОНТАКТЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+}

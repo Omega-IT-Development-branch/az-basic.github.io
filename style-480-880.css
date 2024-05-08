@@ -1,0 +1,444 @@
+@media (min-width: 481px) and (max-width: 880px) {
+    section{
+        padding-bottom: 72px;
+    }
+    /*ВЫПАДАЮЩЕЕ МЕНЮ*/
+    .custom-select {
+        position: relative;
+        min-width: calc(max-content + 20px);
+    }
+    /* ХЕДЕР //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .burger-btn{
+        display: flex;
+        position: relative;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: var(--three);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
+    }
+    .burger-btn svg{
+        position: absolute;
+        top: 21px;
+        right: 12px;
+    }
+    .logo-head{
+        width: 40%;
+    }
+    .nav-head{
+        display: none;
+    }
+    .phone-header-box{
+        display: none;
+    }
+    /*С фоном на всю ширину//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .img-fw-box{
+        height: 50vh;
+    }
+    .img-fw-text-box{
+        gap: 8px;
+    }
+    .img-fw-text-box p{
+        margin-bottom: 70px;
+    }
+    /*Поиск //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .search h2{
+        margin-bottom: 32px;
+    }
+    .search-input-box{
+        justify-content: space-between;
+    }
+    .search-input-box input{
+        width: calc(70% - 46px);
+        border: 0;
+    }
+    .search-input-box a{
+        display: none;
+        width: max-content;
+        max-width: calc(30% - 22px);
+        justify-content: end;
+        border-left: 1px solid var(--foo);
+    }
+    .search-input-box a:last-child{
+        display: flex;
+        border-right: 0px;
+    }
+    .search-icon{
+        width: 24px;
+        height: 24px;
+    }
+    .search-filter-box{
+        gap: 10px;
+    }
+    .search-filter-box img{
+        object-fit: contain;
+    }
+    .search-btn-box{
+        gap: 12px;
+        justify-content: end;
+    }
+    /*Секция о нас //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .about{
+        flex-direction: row;
+        gap: 20px;
+    }
+    .about-text-box{
+        width: calc(50% - 10px);
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    .about-text-box>div{
+        width: calc(100%);
+    }
+    .about-text-box>div:first-child{
+        gap: 12px;
+    }
+    .about-advantages-box{
+        flex-direction: column;
+        width: calc(50% - 10px);
+        gap: 16px;
+        justify-content: start;
+    }
+    .about-advantages-item{
+        width: calc(100% - 40px);
+        gap: 8px;
+    }
+    /*Оранжевые секции ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .feedback-box{
+        gap: 50px;
+        padding: 32px 16px;
+    }
+    .feedback-box>div{
+        width: calc(50% - 32px);
+    }
+    .feedback-personal-manager-box{
+        margin-top: 16px;
+        gap: 17px;
+    }
+    .feedback-personal-manager-photo{
+        border-radius: 10px;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+    }
+    .feedback-personal-manager-text{
+        gap: 8px;
+    }
+    .feedback-input-box{
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    .feedback-input-box>input:nth-child(1){
+        width: calc(100% - 12px);
+    }
+    .feedback-input-box>input:nth-child(2){
+        width: calc(100% - 12px);
+    }
+    .feedback-input-box>input:nth-child(3){
+        width: calc(100%);
+    }
+    .feedback-check-box{
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+    /*секция сотрудники ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .employee-section{
+        gap: 32px;
+    }
+    /*секция партнеры*/
+    .company-box{
+        gap: 32px;
+    }
+    .company-swiper-slide{
+        height: calc(19vw - 20px)!important;
+    }
+    /*СТРАНИЦА ПРОЕКТЫ //////////////////////////////////////////////////////////////////////////////*/
+    /*Секция с проектами*/
+    .project-head-box{
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 32px;
+        gap: 32px;
+    }
+    .project-head-sorter{
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+    }
+    .project-head-sorter-mobile{
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        width: max-content;
+    }
+    .project-head-btn-filter{
+        justify-self: start;
+        gap: 8px;
+        display: flex;
+        border-radius: 10px;
+        background-color: var(--three);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        padding: 14px 16px;
+    }
+    .project-head-sorter switch{
+        justify-self: end;
+    }
+    .project-head-sorter .custom-select{
+        display: none;
+    }
+    .custom-select-mobile{
+        display: flex;
+        border-radius: 10px;
+        background-color: var(--three);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        padding: 14px 16px;
+    }
+    .project-tile-box>li.slider-one-jk-box{
+        width: calc(50% - 60px);
+    }
+    .project-list-box{
+        display: none;
+    }
+    .project-list-box-mobile{
+        display: flex;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+    .project-list-photo-box{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .project-list-photo{
+        width: 30vw;
+        height: 15vw;
+    }
+    .project-list-jk-btn-text{
+        gap: 8px;
+        width: max-content;
+        height: max-content;
+    }
+    .project-list-text{
+        width: calc(100%);
+        justify-content: space-between;
+        gap: 8px;
+        margin-top: 20px;
+    }
+    .project-list-jk-info-box{
+        width: calc(50% - 8px);
+        gap: 8px;
+        justify-content: space-between;
+    }
+    .project-list-jk-low-info-box{
+        width: calc(50% - 8px);
+        text-align: end;
+        gap: 8px;
+    }
+    .project-list-jk-info{
+        width: calc(100%);
+    }
+    /*СТРАНИЦА ЖК ///////////////////////////////////////////////////////////////////////////////////*/
+    /*Секция общая информация о ЖК*/
+    .one-jk-search{
+        gap: 48px;
+    }
+    .one-jk-title{
+        margin-bottom: 32px;
+    }
+    .one-jk-filter-box{
+        margin-bottom: 48px;
+    }
+    .one-jk-general-info{
+        width: 100%;
+        gap: 40px;
+    }
+    .one-jk-general-info>div{
+        width: calc(50% - 20px);
+    }
+    .one-jk-swiper{
+        height: 20vh;
+    }
+    .one-jk-swiper .swiper-button-next,
+    .one-jk-swiper .swiper-button-prev{
+        width: 20px;
+        height: 20px;
+    }
+    /*Секция поиска квартир*/
+    .search-one-jk-input-box input{
+        width: calc(70% - 46px);
+    }
+    .search-one-jk-input-box a{
+        display: none;
+    }
+    .search-one-jk-input-box a:nth-child(6){
+        display: flex;
+        padding: 0;
+        border: 0;
+        width: calc(30%);
+        align-items: center;
+        justify-content: end;
+    }
+    .search-one-jk-btn-box{
+        flex-wrap: nowrap;
+    }
+    .search-one-jk-btn-left-box{
+        gap: 8px;
+    }
+    .search-one-jk-two-btn>a{
+        padding: 7px 8px;
+        gap: 4px;
+    }
+    .one-jk-gray-btn{
+        padding: 7px 8px;
+        gap: 4px;
+    }
+    .search-one-jk-btn-box>div.custom-select{
+        display: none;
+    }
+    .drop-down-one-apartment p{
+        display: none;
+    }
+    .drop-down-one-apartment p:first-child,
+    .drop-down-one-apartment p:last-child{
+        display: flex;
+    }
+    .apartments-swiper{
+        padding: 20px 10px 24px 10px;
+    }
+    .apartments-swiper .swiper-slide{
+        width: calc(50% - 40px)!important;
+        gap: 8px;
+        padding: 5px;
+    }
+    .apartments-swiper-img-text{
+        left: 2px;
+    }
+    .apartments-swiper-img-text p{
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+    /*Секция об обьекте*/
+    .one-jk-benefits-title{
+        margin-bottom: 32px;
+    }
+    .one-jk-benefits-left{
+        gap: 8px;
+        justify-content: start;
+        height: max-content;
+    }
+    .one-jk-benefits-img-box{
+        width: calc(50% - 4px);
+        gap: 8px;
+        height: max-content;
+        margin-bottom: 8px;
+    }
+    .one-jk-benefits-img{
+        height: 20vh;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .one-jk-benefits-right{
+        width: calc(50% - 20px);
+        gap: 24px;
+    }
+    /*СТРАНИЦА ПЛАНИРОВКИ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .plan-filter-box{
+        display: none;
+    }
+    .plan-swiper{
+        width: calc(50% - 20px);
+        height: 25vh;
+    }
+    .plan-swiper .swiper-button-next,
+    .plan-swiper .swiper-button-prev{
+        width: 24px;
+        height: 24px;
+    }
+    .plan-info-box{
+        gap: 12px;
+        width: calc(50% - 20px);
+    }
+    .plan-info-text-box>li{
+        width: calc(100% - 20px);
+    }
+    .plan-info-btn-box{
+        flex-direction: column;
+    }
+    .plan-info-btn-box a{
+        width: calc(100% - 30px);
+    }
+    .plan-filter-icon-box{
+        margin-bottom: 48px;
+    }
+    /*ВЫБОР КВАРТИРЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    /*Секция фильтра квартир*/
+    .apartment-filter-box{
+        gap: 12px;
+    }
+    .apartment-filter-top-box{
+        display: none;
+    }
+    .apartment-filter-box-mobile{
+        display: flex;
+        justify-content: space-between;
+    }
+    .apartment-filter-box-mobile-section{
+        padding-bottom: 30px;
+    }
+    /*КАЛЬКУЛЯТОР ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .calculator h1{
+        margin-bottom: 48px;
+    }
+    .calculator-box{
+        width: calc(50% - 18px);
+    }
+    .calculator-result{
+        gap: 12px;
+        width: 50%;
+        margin-left: 18px;
+    }
+    .calculator-result-head{
+        display: none;
+    }
+    .calculator-result-item{
+        flex-direction: column;
+        padding: 5px;
+    }
+    .calculator-result-item>div:first-child{
+        width: calc(50%);
+        height: 40px;
+        align-self: flex-start;
+    }
+    .calculator-result-text-box{
+        width: calc(100%);
+        height: 40px;
+        justify-content: space-between;
+    }
+    .calculator-result-text-box p{
+        width: calc(50%);
+    }
+    .calculator-result-text-box p:first-child{
+        display: flex;
+    }
+    .calculator-result-text-box p:last-child{
+        text-align: end;
+    }
+    /*ФУТЕР ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .footer-top-box{
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+    .footer-top-item{
+        width: calc(50% - 24px);
+    }
+    .footer-top-item:first-child,
+    .footer-top-item:last-child{
+        justify-content: space-between;
+    }
+    .footer-logo{
+        width: 100%;  
+    }
+    .footer-bottom-item{
+        margin-top: 24px;
+    }
+}
