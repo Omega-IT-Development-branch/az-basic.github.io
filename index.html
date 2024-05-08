@@ -3,16 +3,16 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Ассоциация застройщиков</title>
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    
         
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="style1250.css" />
-        <link rel="stylesheet" href="style768.css" />
-        <link rel="stylesheet" href="style480.css" />
-
+        <link rel="stylesheet" href="style-880-1024.css" />
+        <link rel="stylesheet" href="style-480-880.css" />
+        <link rel="stylesheet" href="style-480-740.css" />
+        <link rel="stylesheet" href="style-480.css" />
     </head>  
     <body>
 <!--ХЕДЕР /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -42,13 +42,21 @@
                     <p class="orange-text bold-text">+7 (905) 930-31-13</p>
                     <p>Заказать звонок</p>
                 </a>
+
+                <a class="burger-btn">
+                    <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="2" rx="1" fill="#CE3A13"/>
+                        <rect x="16" y="10" width="24" height="2" rx="1" fill="#CE3A13"/>
+                        <rect y="20" width="40" height="2" rx="1" fill="#CE3A13"/>
+                    </svg>                        
+                </a>
             </div>
         </header>
 <!--ГЛАВНАЯ СТРАНИЦА ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
         <main class="wrapper">
             <!--Секция с фоном на всю ширину /////////////////-->
             <section>
-                <div class="flex column-flex img-fw-box">
+                <div class="flex column-flex content img-fw-box">
                     <img src="img/photo/Rectangle 1.png">
                     <div class="flex column-flex content img-fw-text-box">
                         <h1 class="white-text">Новостройки Новосибирска</h1>
@@ -181,7 +189,7 @@
                                     <p class="light-gray-text text-size12">Квартир: 900</p>
                                 </div>
                             </div>
-                        </a>           
+                        </a>        
                     </div>
                     
                     <div class="swiper-button-next"><img src="img/icon/Frame 3.png"></div>
@@ -190,11 +198,26 @@
 
                 <script>
                 var swiper = new Swiper(".jk-Swiper", {
-                    slidesPerView: 3,
+                    loop: true,      
                     spaceBetween: 36,
                     navigation: {
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
+                    },
+                    slidesPerView: 1.2,
+                    breakpoints: {
+                        482: {
+                            slidesPerView: 2,
+                            spaceBetween: 36,
+                        },
+                        680: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 36,
+                        },
+                        880: {
+                            slidesPerView: 3,
+                            spaceBetween: 36,
+                        },
                     },
                 });
                 </script>
@@ -266,36 +289,40 @@
                 <div class="flex column-flex content employee-section">
                     <h2>Наша команда</h2>
                     
-                    <ul class="flex row-flex employee-box">
-                        <li class="flex column-flex employee-item">
-                            <div class="employee-photo"><img src="img/photo/employee.png"></div>
-                            <div class="flex column-flex employee-text-box">
-                                <p class="orange-text text-size20 medium-text">Константин Цивелев</p>
-                                <p class="light-gray-text text-size14">Директор филиала г. Новосибирск</p>
-                                <p class="text-size14">+7 (905) 930-31-13</p>
-                                <p class="text-size14">info-azr@yandex.ru</p>
-                            </div>
-                        </li>
-                        <li class="flex column-flex employee-item">
-                            <div class="employee-photo"><img src="img/photo/employee.png"></div>
-                            <div class="flex column-flex employee-text-box">
-                                <p class="orange-text text-size20 medium-text">Константин Цивелев</p>
-                                <p class="light-gray-text text-size14">Директор филиала г. Новосибирск</p>
-                                <p class="text-size14">+7 (905) 930-31-13</p>
-                                <p class="text-size14">info-azr@yandex.ru</p>
-                            </div>
-                        </li>
-                        <li class="flex column-flex employee-item">
-                            <div class="employee-photo"><img src="img/photo/employee.png"></div>
-                            <div class="flex column-flex employee-text-box">
-                                <p class="orange-text text-size20 medium-text">Константин Цивелев</p>
-                                <p class="light-gray-text text-size14">Директор филиала г. Новосибирск</p>
-                                <p class="text-size14">+7 (905) 930-31-13</p>
-                                <p class="text-size14">info-azr@yandex.ru</p>
-                            </div>
-                        </li>
-                    </ul>
-
+                    <div class="swiper employee-Swiper">
+                        <div class="swiper-wrapper">
+                            <a class="swiper-slide">
+                                <div class="flex column-flex employee-item">
+                                    <div class="employee-photo"><img src="img/photo/employee.png"></div>
+                                    <div class="flex column-flex employee-text-box">
+                                        <p class="orange-text text-size20 medium-text">Константин Цивелев</p>
+                                        <p class="light-gray-text text-size14">Директор филиала г. Новосибирск</p>
+                                        <p class="text-size14">+7 (905) 930-31-13</p>
+                                        <p class="text-size14">info-azr@yandex.ru</p>
+                                    </div>
+                                </div>
+                            </a> 
+                        </div>
+                    </div>
+    
+                    <script>
+                    var swiper = new Swiper(".employee-Swiper", {
+                        loop: true,      
+                        spaceBetween: 40,
+                        slidesPerView: 1.2,
+                        breakpoints: {
+                            480: {
+                                slidesPerView: 2,
+                            },
+                            680: {
+                                slidesPerView: 2.5,
+                            },
+                            880: {
+                                slidesPerView: 3,
+                            },
+                        },
+                    });
+                    </script>
                     <div class="flex row-flex employee-btn-box">
                         <a class="btn btn-gray">Написать нам</a>
                         <a class="btn btn-orange">Все сотрудики</a>
@@ -341,39 +368,49 @@
                     <div class="flex row-flex project-head-box">
                         <h2>Все проекты</h2>
                         <div class="flex row-flex project-head-sorter">
+                            <a class="flex row-flex project-head-btn-filter">
+                                <img src="img/icon/sliders-horizontal.svg">
+                                <p>Фильтры</p>
+                            </a>
 
-                            <div class="custom-select" style="width:200px;">
-                                <select>
-                                  <option value="0">
-                                    <p>По умолчанию</p>          
-                                </option>
-                                  <option value="1">По умолчанию</option>
-                                  <option value="2">Возрастание</option>
-                                  <option value="3">Убывание</option>
-                                </select>
-                            </div>
-
-                            <div class="switch">
-                                <input class="project-switch-input" type="checkbox" id="switch" />
-                                <label class="project-switch-label" for="switch"></label>
-                                <div class="flex row-flex switch-img-box">
-                                    <div>
-                                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect y="4" x="4" width="8" height="8" fill="#CE3A13"/>
-                                            <rect y="4" x="14" width="8" height="8" fill="#CE3A13"/>
-                                            <rect y="14" x="4" width="8" height="8" fill="#CE3A13"/>
-                                            <rect y="14" x="14" width="8" height="8" fill="#CE3A13"/>
-                                        </svg>                            
-                                    </div>
-                                    <div>
-                                        <svg width="27" height="27" viewBox="0 0 100% 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect y="4" x="4" width="18" height="4" fill="#FAFAFA"/>
-                                            <rect y="11" x="4" width="18" height="4" fill="#FAFAFA"/>
-                                            <rect y="18" x="4" width="18" height="4" fill="#FAFAFA"/>
-                                        </svg>
-                                    </div>
+                            <div class="flex row-flex project-head-sorter-mobile">
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="0">
+                                        <p>По умолчанию</p>          
+                                        </option>
+                                        <option value="1">По умолчанию</option>
+                                        <option value="2">Возрастание</option>
+                                        <option value="3">Убывание</option>
+                                    </select>
                                 </div>
-                            </div>
+    
+                                <div class="custom-select-mobile">
+                                    <img src="img/icon/sliders-horizontal.svg">       
+                                </div>
+    
+                                <div class="switch">
+                                    <input class="project-switch-input" type="checkbox" id="switch" />
+                                    <label class="project-switch-label" for="switch"></label>
+                                    <div class="flex row-flex switch-img-box">
+                                        <div>
+                                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect y="4" x="4" width="8" height="8" fill="#CE3A13"/>
+                                                <rect y="4" x="14" width="8" height="8" fill="#CE3A13"/>
+                                                <rect y="14" x="4" width="8" height="8" fill="#CE3A13"/>
+                                                <rect y="14" x="14" width="8" height="8" fill="#CE3A13"/>
+                                            </svg>                            
+                                        </div>
+                                        <div>
+                                            <svg width="27" height="27" viewBox="0 0 100% 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect y="4" x="4" width="18" height="4" fill="#FAFAFA"/>
+                                                <rect y="11" x="4" width="18" height="4" fill="#FAFAFA"/>
+                                                <rect y="18" x="4" width="18" height="4" fill="#FAFAFA"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>                 
                         </div>
                     </div>
                     <!--Плиточный вид-->
@@ -419,7 +456,7 @@
                                     <p class="light-gray-text text-size12">Квартир: 900</p>
                                 </div>
                             </a>
-                        </li>               
+                        </li>                 
                     </ul>
 
                     <!--Список вид-->
@@ -467,6 +504,38 @@
                                             <p>от 5 000 000</p>
                                         </li>
                                     </ul>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="flex column-flex project-list-box-mobile">
+                        <li class="flex column-flex project-list-item">
+                            <a class="flex column-flex roject-list-item">
+                                <div class="flex row-flex project-list-photo-box">
+                                    <div class="project-list-photo"><img src="img/photo/Rectangle 16.png"></div>
+                                    <div class="flex row-flex project-list-jk-btn-text">
+                                        <p class="text-size12">Новостройки</p>
+                                        <p class="text-size12">Вторички</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex row-flex project-list-text">
+                                    <div class="flex column-flex project-list-jk-info-box">
+                                        <div class="flex column-flex project-list-jk-main-info">
+                                            <p class="bold-text text-size18">Наименование ЖК</p>
+                                            <p class="dark-gray-text text-size14">Расположение</p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="flex column-flex project-list-jk-low-info-box">
+                                        <p class="medium-text">Сдан в 3кв. 2023 г.</p>
+        
+                                        <div class="flex column-flex project-list-jk-low-info">
+                                            <p class="light-gray-text text-size14">Застройщик: ГК «»</p>
+                                            <p class="light-gray-text text-size14">Квартир: 900</p>
+                                        </div>
+                                    </div>  
                                 </div>
                             </a>
                         </li>
@@ -550,8 +619,22 @@
                             <script>
                                 var swiper = new Swiper(".one-jk-swiper-bottom", {
                                     loop: true,
-                                    spaceBetween: 40,
+                                    spaceBetween: 20,
                                     slidesPerView: 8,
+                                    breakpoints: {
+                                        480: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 20,
+                                        },
+                                        680: {
+                                            slidesPerView: 4,
+                                            spaceBetween: 30,
+                                        },
+                                        880: {
+                                            slidesPerView: 8,
+                                            spaceBetween: 40,
+                                        },
+                                    },
                                     freeMode: true,
                                     watchSlidesProgress: true,
                                     });
@@ -661,6 +744,10 @@
                                 </a>
                             </div>
 
+                            <div class="custom-select-mobile">
+                                <img src="img/icon/sliders-horizontal.svg">       
+                            </div>
+
                             <div class="custom-select">
                                 <select>
                                   <option value="0">По умолчанию</option>
@@ -672,7 +759,7 @@
                         </div>          
                     </div>
 
-                    <p class="text-size18">Корпус <span class="orange-text">&#183;</span> Сдан в 1кв. 2013г.</p>
+                    <p class="text-size18">Корпус <span class="orange-text text-size14">⬤</span> Сдан в 1кв. 2013г.</p>
 
 
                     <div class="flex column-flex one-jk-types-apartments">
@@ -701,14 +788,39 @@
                                         </div>
                                         <p>Корпус №, этаж 1</p>
                                         <p class="text-size14 light-gray-text">Черновая</p>
-                                    </div>               
+                                    </div>   
+                                    <div class="flex column-flex swiper-slide">
+                                        <div class="apartments-swiper-img-box">
+                                            <img src="img/photo/Plan-studia.png">
+                                            <div class="flex row-flex apartments-swiper-img-text">
+                                                <p>Новостройки</p>
+                                                <p>Вторичка</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex column-flex apartments-swiper-info">
+                                            <p class="medium-text">Студии, 28.45м&sup2;</p>
+                                            <p class="medium-text text-size18">5 000 000₽</p>
+                                        </div>
+                                        <p>Корпус №, этаж 1</p>
+                                        <p class="text-size14 light-gray-text">Черновая</p>
+                                    </div>             
                                 </div>
                             </div>
 
                             <script>
                                 var swiper = new Swiper(".apartments-swiper", {
-                                    slidesPerView: 3,
-                                    spaceBetween: 50,
+                                    slidesPerView: 1,
+                                    spaceBetween: 0,
+                                    breakpoints: {
+                                        480: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 0
+                                        },
+                                        660: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 0,
+                                        },
+                                    },
                                 });
                             </script>
                         </details>
@@ -964,10 +1076,22 @@
 <!--ВЫБОР КВАРТИРЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
         <main>
             <!--Секция Фильтров/////////////////-->
-            <section>
+            <section class="apartment-filter-box-mobile-section">
                 <div class="flex column-flex content apartment-filter-section">
                     <h1>Выбрать квартиру</h1>
                     <div class="flex column-flex apartment-filter-box">
+                        
+                        <div class="flex row-flex apartment-filter-box-mobile">
+                            <a class="flex row-flex project-head-btn-filter">
+                                <img src="img/icon/sliders-horizontal.svg">
+                                <p>Фильтры</p>
+                            </a>
+
+                            <div class="custom-select-mobile">
+                                <img src="img/icon/sliders-horizontal.svg">       
+                            </div>
+                        </div>
+
                         <div class="flex row-flex apartment-filter-top-box">
                             <div class="flex column-flex apartment-filter-choose-jk">
                                 <p class="light-gray-text text-size14">Выберите ЖК</p>
@@ -1189,16 +1313,34 @@
 
                             <ul class="flex column-flex calculator-result-box">
                                 <li class="flex row-flex calculator-result-item">
-                                    <div><img src="img/photo/vtb.png"></div>
-                                    <p class="text-size20 medium-text">от 0.01%</p>
-                                    <p class="text-size20 medium-text">от 15%</p>
-                                    <p class="text-size20 medium-text">77 801 ₽</p>
+                                    <div class="flex"><img src="img/photo/vtb.png"></div>
+                                    <div class="flex row-flex calculator-result-text-box">
+                                        <p class="light-gray-text">Ставка</p>
+                                        <p class="text-size20 medium-text">от 0.01%</p>
+                                    </div>
+                                    <div class="flex row-flex calculator-result-text-box">
+                                        <p class="light-gray-text">Первоначальный взнос</p>
+                                        <p class="text-size20 medium-text">от 15%</p>
+                                    </div>
+                                    <div class="flex row-flex calculator-result-text-box">
+                                        <p class="light-gray-text">Платеж, ₽/месяц</p>
+                                        <p class="text-size20 medium-text">77 801 ₽</p>
+                                    </div>
                                 </li>
                                 <li class="flex row-flex calculator-result-item">
-                                    <div><img src="img/photo/vtb.png"></div>
-                                    <p class="text-size20 medium-text">от 0.01%</p>
-                                    <p class="text-size20 medium-text">от 15%</p>
-                                    <p class="text-size20 medium-text">77 801 ₽</p>
+                                    <div class="flex"><img src="img/photo/vtb.png"></div>
+                                    <div class="flex row-flex calculator-result-text-box">
+                                        <p class="light-gray-text">Ставка</p>
+                                        <p class="text-size20 medium-text">от 0.01%</p>
+                                    </div>
+                                    <div class="flex row-flex calculator-result-text-box">
+                                        <p class="light-gray-text">Первоначальный взнос</p>
+                                        <p class="text-size20 medium-text">от 15%</p>
+                                    </div>
+                                    <div class="flex row-flex calculator-result-text-box">
+                                        <p class="light-gray-text">Платеж, ₽/месяц</p>
+                                        <p class="text-size20 medium-text">77 801 ₽</p>
+                                    </div>
                                 </li>                   
                             </ul>
 
@@ -1206,10 +1348,19 @@
 
                             <ul class="flex column-flex calculator-result-box">
                                 <li class="flex row-flex calculator-result-item">
-                                    <div><img src="img/photo/vtb.png"></div>
-                                    <p class="text-size20 medium-text">от 0.01%</p>
-                                    <p class="text-size20 medium-text">от 15%</p>
-                                    <p class="text-size20 medium-text">77 801 ₽</p>
+                                    <div class="flex"><img src="img/photo/vtb.png"></div>
+                                    <div class="flex row-flex calculator-result-text-box">
+                                        <p class="light-gray-text">Ставка</p>
+                                        <p class="text-size20 medium-text">от 0.01%</p>
+                                    </div>
+                                    <div class="flex row-flex calculator-result-text-box">
+                                        <p class="light-gray-text">Первоначальный взнос</p>
+                                        <p class="text-size20 medium-text">от 15%</p>
+                                    </div>
+                                    <div class="flex row-flex calculator-result-text-box">
+                                        <p class="light-gray-text">Платеж, ₽/месяц</p>
+                                        <p class="text-size20 medium-text">77 801 ₽</p>
+                                    </div>
                                 </li>                 
                             </ul>
                         </div>
@@ -1378,6 +1529,7 @@
                         <p>Есть вопросы?</p>
                         <a class="btn btn-orange">Позвоните нам</a>
                     </div>
+                    <a class="footer-bottom-item light-gray-text text-size18">Политика конфиденциальности</a>
                 </div>
                 
                 <ul class="flex column-flex footer-top-item">
@@ -1402,16 +1554,12 @@
                     <a><h2>+7 (905) 930-31-13</h2></a>
                     <a>info-azr@yandex.ru</a>
                     <p>Ежедневно с 9:00 до 18:00</p>
-                </div>
-            </div>
 
-            <div class="flex row-flex content footer-bottom-box">
-                <a class="footer-bottom-item light-gray-text text-size18">Политика конфиденциальности</a>
-                <div class="footer-bottom-item"></div>
-                <div class="flex row-flex footer-bottom-item">
-                    <a class="footer-social"><img src="img/icon/Telegram.png"></a>
-                    <a class="footer-social"><img src="img/icon/Whatsapp.png"></a>
-                    <a class="footer-social"><img src="img/icon/Gmail.png"></a>
+                    <div class="flex row-flex footer-bottom-item">
+                        <a class="footer-social"><img src="img/icon/Telegram.png"></a>
+                        <a class="footer-social"><img src="img/icon/Whatsapp.png"></a>
+                        <a class="footer-social"><img src="img/icon/Gmail.png"></a>
+                    </div>
                 </div>
             </div>
         </footer>

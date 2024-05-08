@@ -1,0 +1,42 @@
+@media (min-width: 481px) and (max-width:740px) {
+    /*Оранжевые секции ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .feedback-box{
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .feedback-box>div{
+        width: calc(100%);
+    }
+    .choose-apartment-head p{
+        width: calc(25% - 16px);
+    }
+    .choose-apartment-head p:nth-child(4),
+    .choose-apartment-head p:nth-child(6){
+        display: none;
+    }
+    .choose-apartment-item div{
+        padding-right: 24px;
+        width: calc(25% - 16px - 24px);;
+        align-items: center;
+        text-align: center;
+        gap: 14px;
+    }
+    .choose-apartment-item>p{
+        width: calc(25% - 16px);
+    }
+    .choose-apartment-item p:nth-child(4),
+    .choose-apartment-item p:nth-child(6){
+        display: none;
+    }
+    /*КОНТАКТЫ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .contact-main-box{
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .contact-text-box{
+        width: calc(100%);
+    }
+    .contact-map-box{
+        width: calc(100%);
+    }
+}
