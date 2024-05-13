@@ -59,7 +59,7 @@ body{
 }
 .content{
     margin: 0 auto;
-    width: clamp(393px, 91.5vw, 1440px);
+    width: clamp(320px, 91.5vw, 1440px);
 }
 section{
     padding-bottom: 128px;
@@ -144,6 +144,7 @@ a{
     align-items: center;
     width: max-content;
     cursor: pointer;
+    justify-content: center;
 }
 .btn img{
     width: 24px;
@@ -504,7 +505,7 @@ header{
     align-items: center;
 }
 .jk-Swiper{
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     padding: 20px;
 }
 .slider-one-jk-box{
@@ -643,7 +644,7 @@ a.slider-one-jk-box{
     gap: 48px;
 }
 .employee-Swiper{
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     padding: 20px;
 }
 .employee-item{
@@ -707,6 +708,9 @@ a.slider-one-jk-box{
     display: none;
 }
 .custom-select-mobile{
+    display: none;
+}
+.search-custom-select-mobile{
     display: none;
 }
 .switch{
