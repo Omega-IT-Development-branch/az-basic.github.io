@@ -59,7 +59,7 @@ body{
 }
 .content{
     margin: 0 auto;
-    width: clamp(393px, 91.5vw, 1440px);
+    width: clamp(320px, 91.5vw, 1440px);
 }
 section{
     padding-bottom: 128px;
@@ -144,6 +144,7 @@ a{
     align-items: center;
     width: max-content;
     cursor: pointer;
+    justify-content: center;
 }
 .btn img{
     width: 24px;
@@ -343,9 +344,6 @@ a{
     box-shadow: inset 0 0 0 2px var(--three);
 }
 /* ХЕДЕР //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.burger-btn{
-    display: none;
-}
 header{
     box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
     width: 100%;
@@ -378,6 +376,40 @@ header{
     height: 100%;
     align-items: end;
     justify-content: center;
+}
+/*Бургер меню*/
+.burger-btn{
+    display: none;
+}
+#menu {
+    z-index: 111;
+    -webkit-transition: all 0.5s;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    top: 90px;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+#menu li {
+    padding: 5px 0px;
+    -webkit-transition: all 0.5s;
+}
+#menu a {
+    padding:8px;
+    -webkit-transition: all 0.5s;
+    cursor: pointer;
+}
+#menu.open {
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, .2);
+    height: auto;
+    width: 100%;
+    background: var(--seven);
+    -webkit-transition: all 0.5s;
 }
 /*С фоном на всю ширину//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .img-fw-box{
@@ -504,7 +536,7 @@ header{
     align-items: center;
 }
 .jk-Swiper{
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     padding: 20px;
 }
 .slider-one-jk-box{
@@ -643,7 +675,7 @@ a.slider-one-jk-box{
     gap: 48px;
 }
 .employee-Swiper{
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     padding: 20px;
 }
 .employee-item{
@@ -707,6 +739,9 @@ a.slider-one-jk-box{
     display: none;
 }
 .custom-select-mobile{
+    display: none;
+}
+.search-custom-select-mobile{
     display: none;
 }
 .switch{
