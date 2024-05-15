@@ -17,7 +17,7 @@
     <body>
 <!--ХЕДЕР /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
         <header class="wrapper">
-            <div class="content flex row-flex header-box">
+            <div class="content flex row-flex header-box" id="h-id">
                 <a class="logo-head"><img src="img/photo/image 6.png"></a>
                 <nav class="flex row-flex nav-head">
                     <ul class="flex row-flex nav-head-box">
@@ -43,13 +43,30 @@
                     <p>Заказать звонок</p>
                 </a>
 
-                <a class="burger-btn">
+                <a class="burger-btn" id="burger-btn">
                     <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="40" height="2" rx="1" fill="#CE3A13"/>
                         <rect x="16" y="10" width="24" height="2" rx="1" fill="#CE3A13"/>
                         <rect y="20" width="40" height="2" rx="1" fill="#CE3A13"/>
                     </svg>                        
                 </a>
+                
+                <div id="menu">
+                    <ul>
+                        <li><a>Проекты</a></li>
+                        <li><a>О компании</a></li>
+                        <li><a>Выбрать квартиру</a></li>
+                        <li><a>Ипотека</a></li>
+                        <li><a>Ипотечный калькулятор</a></li>
+                    </ul>
+                </div>
+                <script>
+                    document.getElementById("burger-btn").addEventListener("click", function(){
+                        console.log("КЛИКНУЛОСЬ!!!!!!!!!!!!!!!!")
+                        document.getElementById("menu").classList.toggle("open");
+                    })
+                </script>
+
             </div>
         </header>
 <!--ГЛАВНАЯ СТРАНИЦА ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -206,7 +223,7 @@
                     },
                     slidesPerView: 1.2,
                     breakpoints: {
-                        482: {
+                        481: {
                             slidesPerView: 2,
                             spaceBetween: 36,
                         },
@@ -742,6 +759,9 @@
                                     </div>
                                     <p>Квартиры в шахматке</p>
                                 </a>
+                                <div class="search-custom-select-mobile custom-select-mobile">
+                                    <img src="img/icon/sliders-horizontal.svg">       
+                                </div>
                             </div>
 
                             <div class="custom-select-mobile">
@@ -806,23 +826,6 @@
                                     </div>             
                                 </div>
                             </div>
-
-                            <script>
-                                var swiper = new Swiper(".apartments-swiper", {
-                                    slidesPerView: 1,
-                                    spaceBetween: 0,
-                                    breakpoints: {
-                                        480: {
-                                            slidesPerView: 2,
-                                            spaceBetween: 0
-                                        },
-                                        660: {
-                                            slidesPerView: 2,
-                                            spaceBetween: 0,
-                                        },
-                                    },
-                                });
-                            </script>
                         </details>
 
                         <details>
