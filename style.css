@@ -198,7 +198,7 @@ a{
 /*ВЫПАДАЮЩЕЕ МЕНЮ*/
 .custom-select {
     position: relative;
-    min-width: 150px;
+    min-width: 162px;
 }
 .custom-select select {
     display: none;
@@ -688,7 +688,7 @@ a.slider-one-jk-box{
 }
 .employee-photo{
     width: 100%;
-    height: 30vh;
+    height: calc(33vw - 80px);
 }
 .employee-photo img{
     border-radius: 10px;
@@ -743,6 +743,10 @@ a.slider-one-jk-box{
 }
 .search-custom-select-mobile{
     display: none;
+}
+.project-head-sorter-mobile{
+    gap: 24px;
+    align-items: center;
 }
 .switch{
     position: relative;
@@ -1492,6 +1496,40 @@ a.project-list-item{
     padding: 14px 16px;
     background-color: var(--seven);
     height: 20px;
+    width: calc(100% - 32px);
+}
+.calculator-input-box{
+    position: relative;
+}
+.range-input {
+    -webkit-appearance: none;
+    width: 100%;
+    appearance: none; 
+    cursor: pointer;
+    outline: none;
+    height: 0px;
+    background: var(--five);
+    position: absolute;
+    bottom: -2;
+    right: 0;
+}
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 6px;
+    width: 24px;
+    background-color: var(--one);
+    box-shadow: 0 0 0 2px var(--one);
+    border-radius: 10px;
+    border: none;
+    transition: .2s ease-in-out;
+}
+.range-input::-webkit-slider-thumb:hover,
+.range-input:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 2px var(--one);
+}
+.range-input:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px var(--one);
 }
 .calculator-input:last-child{
     margin-bottom: 24px;

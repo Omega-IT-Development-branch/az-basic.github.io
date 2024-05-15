@@ -412,17 +412,17 @@
                                     <div class="flex row-flex switch-img-box">
                                         <div>
                                             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect y="4" x="4" width="8" height="8" fill="#CE3A13"/>
-                                                <rect y="4" x="14" width="8" height="8" fill="#CE3A13"/>
-                                                <rect y="14" x="4" width="8" height="8" fill="#CE3A13"/>
-                                                <rect y="14" x="14" width="8" height="8" fill="#CE3A13"/>
+                                                <rect y="4" x="4.5" width="8" height="8" fill="#CE3A13"/>
+                                                <rect y="4" x="14.5" width="8" height="8" fill="#CE3A13"/>
+                                                <rect y="14" x="4.5" width="8" height="8" fill="#CE3A13"/>
+                                                <rect y="14" x="14.5" width="8" height="8" fill="#CE3A13"/>
                                             </svg>                            
                                         </div>
                                         <div>
                                             <svg width="27" height="27" viewBox="0 0 100% 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect y="4" x="4" width="18" height="4" fill="#FAFAFA"/>
-                                                <rect y="11" x="4" width="18" height="4" fill="#FAFAFA"/>
-                                                <rect y="18" x="4" width="18" height="4" fill="#FAFAFA"/>
+                                                <rect y="4" x="4.5" width="18" height="5" fill="#FAFAFA"/>
+                                                <rect y="11" x="4.5" width="18" height="5" fill="#FAFAFA"/>
+                                                <rect y="18" x="4.5" width="18" height="5" fill="#FAFAFA"/>
                                             </svg>
                                         </div>
                                     </div>
@@ -1265,15 +1265,21 @@
                     <div class="flex row-flex">
                         <div class="flex column-flex calculator-box">   
                             <p class="light-gray-text text-size18">Стоимость объекта, ₽</p>
-
-                            <div class="flex column-flex">
-                                <input class="calculator-input">
+                            <div class="flex column-flex calculator-input-box">
+                                <input class="calculator-input value1" value="7 000 000">
+                        
+                                <div class="range">
+                                    <input type="range" min="7000000" max="20000000" value="7000000" id="range1" class="range-input" /> 
+                                </div>
                             </div>
 
                             <p class="light-gray-text text-size18">Первоначальный взнос, ₽</p>
-
-                            <div class="flex column-flex">
-                                <input class="calculator-input">
+                            <div class="flex column-flex calculator-input-box">
+                                <input class="calculator-input value2" value="1 000 000">
+                        
+                                <div class="range">
+                                    <input type="range" min="1000000" max="20000000" value="1000000" id="range2" class="range-input" /> 
+                                </div>
                             </div>
 
                             <p class="light-gray-text text-size18">Ипотечная программа</p>
@@ -1291,9 +1297,12 @@
                                 <p class="light-gray-text text-size18">Срок кредита</p>
                                 <p class="light-gray-text text-size18">до 30 лет</p>
                             </div>
-
-                            <div class="flex column-flex">
-                                <input class="calculator-input">
+                            <div class="flex column-flex calculator-input-box">
+                                <input class="calculator-input value3" value="30">
+                        
+                                <div class="range">
+                                    <input type="range" min="5" max="30" value="30" id="range3" class="range-input" /> 
+                                </div>
                             </div>
     
                             <div class="flex row-flex calculator-two-text">
@@ -1649,6 +1658,35 @@
             /*if the user clicks anywhere outside the select box,
             then close all select boxes:*/
             document.addEventListener("click", closeAllSelect);
+            </script>
+
+            <script>
+                const sliderEl = document.querySelector("#range1")
+                const sliderValue = document.querySelector(".value1")
+
+                sliderEl.addEventListener("input", (event) => {
+                    const tempSliderValue = event.target.value; 
+                    sliderValue.value = tempSliderValue.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+                    const progress = (tempSliderValue / sliderEl.max) * 100;
+                })
+
+                const sliderfirstpay = document.querySelector("#range2")
+                const sliderfirstpayvalue  = document.querySelector(".value2")
+
+                sliderfirstpay.addEventListener("input", (event) => {
+                    const tempSliderValue = event.target.value; 
+                    sliderfirstpayvalue.value = tempSliderValue.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+                    const progress = (tempSliderValue / sliderfirstpay.max) * 100;
+                })
+
+                const slideryear = document.querySelector("#range3")
+                const slideryearValue = document.querySelector(".value3")
+
+                slideryear.addEventListener("input", (event) => {
+                    const tempSliderValue = event.target.value; 
+                    slideryearValue.value = tempSliderValue.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+                    const progress = (tempSliderValue / slideryear.max) * 100;
+                })
             </script>
     </body>
 </html>
