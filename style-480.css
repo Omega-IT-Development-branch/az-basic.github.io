@@ -168,6 +168,10 @@
     .employee-btn-box .btn{
         width: 100%;
     }
+    .employee-photo{
+        width: 100%;
+        height: calc(80vw - 80px);
+    }
     /*секция партнеры*/
     .company-box{
         gap: 32px;
